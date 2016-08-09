@@ -1,0 +1,432 @@
+.black {
+	background: #000000;
+}
+
+.index_animation_container {
+	height: 730px;
+	width: 100%;
+}
+
+#first_view {
+	background-image: url(../images/index-bg.jpg);
+	background-position: top;
+	height: 730px;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+}
+
+#bg_containers {
+	width: 100%;
+	margin: 0;
+}
+
+#bg_containers div {
+	width: 100%;
+	height:730px;
+	margin:0 auto;
+}
+
+#bg_containers .bg1 {
+	background:url(../images/1.jpg) no-repeat;
+}
+
+#bg_containers .bg2 {
+	background:url(../images/2.jpg) no-repeat;
+}
+
+#bg_containers .bg3 {
+	background:url(../images/3.jpg) no-repeat;
+}
+
+#bg_containers .bg4 {
+	background:url(../images/4.jpg) no-repeat;
+}
+
+#first_view_wrapper {
+	background-color: transparent;
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: 314px;
+	width: 100%;
+	z-index: 11;
+}
+
+#fv_title {
+	z-index: 12;
+}
+
+#fv_sub {
+	z-index: 13;
+}
+
+#subject_animation {
+	background-color: #FFFFFF;
+	display: none;
+	height: 730px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 20;
+}
+
+#subject_animation_wrapper {
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: 204px;
+	width: 100%;
+	z-index: 21;
+	display: none;
+}
+
+#sa_title {
+	z-index: 22;
+	display: none;
+}
+
+#sa_sub {
+	z-index: 23;
+	display: none;
+}
+
+#sa_contain {
+	z-index: 24;
+	display: none;
+}
+
+#company_quicklook {
+	background-color: #9CBD41;
+	display: none;
+	height: 730px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 30;
+}
+
+#company_quicklook_wrapper {
+	background-color: transparent;
+	display: none;
+	position: absolute;
+	text-align: center;
+	top: 300px;
+	width: 100%;
+	z-index: 31;
+}
+
+#cq_title {
+	z-index: 32;
+}
+
+#cq_sub {
+	z-index: 33;
+}
+
+#toggle_area {
+	background-color: #9CBD41;
+	display: none;
+	height: 120px;
+	padding: 0;
+	position: absolute;
+	top: 610px;
+	width: 100%;
+	z-index: 40;
+}
+
+.main_title_white, .main_title_black {
+	font-size: 100px;
+	font-weight: 300;
+	line-height: 110px;
+	margin: 0 0 6px 0;
+	padding: 0;
+	font-family: Open Sans, "Simhei";
+}
+
+.main_title_black_2 {
+	font-size: 72px;
+	font-weight: 300;
+	line-height: 72px;
+	margin: 0;
+	padding: 0;
+	color: #000000;
+}
+
+.main_title_white {
+	color: #FFFFFF;
+}
+
+.main_title_black {
+	color: #000000;
+}
+
+.main_title_small, .main_title_small_black {
+	color: #FFFFFF;
+	font-size: 70px;
+	font-weight: 300;
+	line-height: 84px;
+	margin: 0 0 6px 0;
+	padding: 0;
+	font-family: Open Sans, Microsoft JhengHei;
+}
+
+.main_title_small_black {
+	color: #000000;
+	line-height: 70px;
+	margin: 0;
+}
+
+.main_subtitle, .main_subtitle_white, .main_subtitle2 {
+	color: #999999;
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 45px;
+	margin: 0 0 25px 0;
+	padding: 0;
+	font-family: Open Sans, Microsoft JhengHei;
+}
+
+.main_subtitle_white {
+	color: #FFFFFF;
+}
+
+.main_subtitle2 {
+	line-height: 40px;
+}
+
+#index_toggle {
+	color: #FFFFFF;
+	float: left;
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 48px;
+	margin: 36px 0;
+	padding: 0;
+}
+
+#index_toggle:hover, #index_toggle:active {
+	text-decoration: none;
+}
+
+#index_toggle_button {
+	background-image: url(../images/index-toggle-button.png);
+	height: 48px;
+	float: left;
+	margin: 0 28px 0 0;
+	padding: 0;
+	width: 48px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+}
+
+#index_wrapper {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	width: 1000px;
+}
+
+/*  SLIDESHOW*/
+
+div#tmpSlideshow {
+	height: 273px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	width: 1000px;
+}
+
+div.tmpSlide {
+	display: none;
+	height: 273px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1000px;
+}
+
+div#tmpSlideshowControls {
+	display: none;
+	height: 102px;
+	margin: 10px auto;
+	position: relative;
+	width: 681px;
+}
+
+div.tmpSlideshowControl {
+	border: 1px solid #cccccc;
+	color: #999999;
+	cursor: pointer;
+	float: left;
+	font-size: 15px;
+	font-weight: 300;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 8px;
+	text-align: center;
+	vertical-align: middle;
+	width: 209px;
+}
+
+div.tmpSlideshowControlActive {
+	color: #000000;
+}
+
+div#tmpSlideshow2 {
+	height: 320px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	width: 1000px;
+}
+
+div.tmpSlide2 {
+	display: none;
+	height: 320px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1000px;
+}
+
+div#tmpSlideshowControls2 {
+	display: none;
+	float: left;
+	height: 59px;
+	margin: 13px 0 13px 257px;
+	position: relative;
+	text-align: center;
+	width: 486px;
+}
+
+div.tmpSlideshowControl2 {
+	border: 1px solid #cccccc;
+	color: #999999;
+	cursor: pointer;
+	float: left;
+	font-size: 12px;
+	font-weight: 300;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 10px;
+	text-align: center;
+	vertical-align: middle;
+	width: 140px;
+}
+
+div.tmpSlideshowControl2Active {
+	border: 1px solid #000000;
+	color: #000000;
+}
+
+#button_go {
+	border: 1px solid #666666;
+	color: #999999;
+	cursor: pointer;
+	font-size:16px;
+	font-weight: 300;
+	height: 53px;
+	line-height: 53px;
+	margin: 40px auto;
+	text-align: center;
+	width: 213px;
+}
+
+#button_go:hover {
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+}
+
+#button_learn_more {
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	background: #FFFFFF;
+	cursor: pointer;
+	font-size:16px;
+	font-weight: 300;
+	height: 53px;
+	line-height: 53px;
+	margin: 40px auto;
+	text-align: center;
+	width: 213px;
+}
+
+#button_learn_more:hover {
+	border: 1px solid #666666;
+	color: #666666;
+	text-decoration: none;
+}
+
+#button_whatsgis {
+	background: #999999;
+	border: 1px solid #999999;
+	bottom: 10px;
+	color: #FFFFFF;
+	cursor: pointer;
+	float: right;
+	font-size: 11px;
+	font-weight: 300;
+	height: 35px;
+	line-height: 35px;
+	margin: 13px 0;
+	text-align: center;
+	vertical-align: middle;
+	width: 74px;
+	-moz-border-radius: .4em;
+	-webkit-border-radius: .4em;
+	border-radius: .4em;
+}
+
+#icon_gis {
+	width: 750px;
+	margin: 0 auto;
+}
+
+#icon_gis ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#icon_gis li {
+	float: left;
+	margin: 48px 0px 38px;
+	width: 150px;
+}
+
+#icon_gis .save_time {
+	background-image: url(../images/icon-save-time.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding-top: 33px;
+}
+
+#icon_gis .cut_costs {
+	background-image: url(../images/icon-cut-costs.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding-top: 33px;
+}
+
+#icon_gis .improve_decisions {
+	background-image: url(../images/icon-improve-decisions.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding-top: 33px;
+}
+
+#icon_gis .better_records {
+	background-image: url(../images/icon-better-records.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding-top: 33px;
+}
+
+#icon_gis .more_transparency {
+	background-image: url(../images/icon-more-transparency.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding-top: 33px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>getchee – News for markets in China, India, and Southeast Asia.</title>
+		<link rel="stylesheet" href="../css/n-form.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="../js/jquery-1.6.1.min.js" ></script>
+		<script src="../js/custom-form-elements.js" ></script>
+		<script src="../js/jquery.placeholder.js" ></script>
+		<script src="../js/jquery.iframe.js" ></script>
+		<script src="../js/jquery.validationEngine-en.js" ></script>
+		<script src="../js/jquery.validationEngine.js" ></script>
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#newsletter-signup-form").validationEngine('attach', {promptPosition : "bottomLeft", autoPositionUpdate : true});
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#newsletter-signup-form").get(0).reset();
+			$("#newsletter-signup-form")[0].reset();
+		});
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<form action="../s2form/process.php" method="post" accept-charset="utf-8" id="newsletter-signup-form" name="form" onSubmit="return checkFields()">
+			<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="Name">
+			<input name="email" id="email" class="validate[required,custom[email]] youremail star" type="text" placeholder="Email">
+			<!-- Begin Catpcha -->
+			<div id="qna">
+				<label for="captcha" id="captcha_question"></label>
+				<input type="text" name="" value="" id="captcha">
+				<p id="captcha_error">Captcha test failed. Please try again.</p>
+				<script src="../s2form/captcha.js" ></script>
+			</div>
+			<!-- End Captcha -->
+			<input type="hidden" name="tags" value="Newsletter Signup - Newsletters.">
+			<input type="submit" class="button" name="subbut" value=" " id="btnSignUp" />
+		</form>
+	</body>
+</html>

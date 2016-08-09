@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<meta property="og:title" content="getchee – Market insight, tools, and services to help brands in Asia." />
+		<meta property="og:description" content="getchee is a data services and solutions provider. We use GIS technology to help retail and bank brands thrive throughout emerging markets in Asia." />
+		<meta property="og:image" content="http://www.getchee.com/images/website-thumbnail.png" />
+		<title>getchee – Market insight, tools, and services to help brands in Asia.</title>
+		<meta name="description" content="getchee is a data services and solutions provider. We use GIS technology to help retail and bank brands thrive throughout emerging markets in Asia.">
+		<meta name="keywords" content="market data, store network planning software, consulting services, food and beverage, merchandise and apparel, banking and finance, emerging markets, Asia, China, India, Southeast Asia, data services and solutions">
+		<link rel="image_src" href="http://www.getchee.com/images/website-thumbnail.png" />
+		<link rel="stylesheet" href="css/n-public.css" />
+		<link rel="stylesheet" href="css/n-header.css" />
+		<link rel="stylesheet" href="css/n-index.css" />
+		<link rel="stylesheet" href="css/n-footer.css" />
+		<link rel="stylesheet" href="css/n-form.css" />
+		<link rel="stylesheet" href="css/n-prettyPhoto.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="js/jquery-1.6.1.min.js" ></script>
+		<script src="js/jquery.cookie.js" ></script>
+		<script src="js/global-scripts.js" ></script>
+		<script src="js/jquery.dropdown.js" ></script>
+		<script src="js/custom-form-elements.js" ></script>
+		<script src="js/jquery.prettyPhoto.js" ></script>
+		<script src="js/jquery.placeholder.js" ></script>
+		<script src="js/jquery-ui.min.js" ></script>
+		<script src="js/jquery.anchor.js" ></script>
+		<script src="js/jquery.validationEngine-en.js" ></script>
+		<script src="js/jquery.validationEngine.js" ></script>
+		<script src="js/jquery.cycle.lite.min.js" ></script>
+		<script>
+		$(document).ready(function() {
+		    if ($.cookie('noShowWelcome')) $('#welcome').hide();
+
+		    else {
+		    	$('#welcome').delay(1000).fadeIn(100);
+		    	$("html").css({ "overflow": "hidden" }, 100);
+		        $(".welcome-close").click(function() {
+		            $("#welcome").hide();
+		            $.cookie('noShowWelcome', true);
+		            $("html").css({ "overflow": "auto" });
+		        });
+		    }
+		});
+		</script>
+
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#contact-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+			});
+		</script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--script>
+		$(document).ready(function(){
+			$("#btnSignUp").click(function(){
+				setTimeout(function(){
+					$("#curious").hide();
+					$("#thank").fadeIn(1500);
+					$('#contact-form').find(':input').each(function(){
+						var type = this.type, tag = this.tagName.toLowerCase();
+						if (type == 'text' || type == 'password' || tag == 'textarea')
+							this.value = '';
+						<!--else if (type == 'checkbox' || type == 'radio')-->
+						<!--this.checked = false;-->
+						<!--else if (tag == 'select')-->
+						<!--this.selectedIndex = -1;
+					})
+				}, 10000);
+				setTimeout(function(){
+					$("#thank").hide();
+					$("#curious").fadeIn(1500);
+					$("#btnSignUp").attr("disabled", false);
+				}, 12000);
+			});
+		});
+		</script-->
+		<script>
+		$(document).ready(function(){
+			$("#contact-form").get(0).reset();
+			$("#contact-form")[0].reset();
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#index_toggle").toggle(function(){
+				$("#index_toggle_button").css({"transform":"rotate(-90deg)","-ms-transform":"rotate(-90deg)","-webkit-transform":"rotate(-90deg)","-o-transform":"rotate(-90deg)","-moz-transform":"rotate(-90deg)"}, 1000);
+				$("#index_toggle_tx01").hide();
+				$("#index_toggle_tx02").fadeIn(300);
+				$(".bg_white").css({"background-color":"transparent"}, 300);
+				$("#dropdown ul.bg_white li").css({"background-color":"transparent"}, 300);
+				$(".dropdown_01").toggleClass("dropdown_01 dropdown_01_w");
+				$(".dropdown_02").toggleClass("dropdown_02 dropdown_02_w");
+				$(".dropdown_03").toggleClass("dropdown_03 dropdown_03_w");
+				$(".dropdown_04").toggleClass("dropdown_04 dropdown_04_w");
+				$(".dropdown_05").toggleClass("dropdown_05 dropdown_05_w");
+				$(".dropdown_06").toggleClass("dropdown_06 dropdown_06_w");
+				$(".dropdown_01_01").toggleClass("dropdown_01_01 dropdown_01_01_w");
+				$(".dropdown_01_02").toggleClass("dropdown_01_02 dropdown_01_02_w");
+				$(".dropdown_01_03").toggleClass("dropdown_01_03 dropdown_01_03_w");
+				$(".dropdown_02_01").toggleClass("dropdown_02_01 dropdown_02_01_w");
+				$(".dropdown_02_02").toggleClass("dropdown_02_02 dropdown_02_02_w");
+				$(".dropdown_02_03").toggleClass("dropdown_02_03 dropdown_02_03_w");
+				$(".dropdown_03_01").toggleClass("dropdown_03_01 dropdown_03_01_w");
+				$(".dropdown_03_02").toggleClass("dropdown_03_02 dropdown_03_02_w");
+				$(".dropdown_04_01").toggleClass("dropdown_04_01 dropdown_04_01_w");
+				$(".dropdown_04_02").toggleClass("dropdown_04_02 dropdown_04_02_w");
+				$(".dropdown_05_01").toggleClass("dropdown_05_01 dropdown_05_01_w");
+				$(".dropdown_05_02").toggleClass("dropdown_05_02 dropdown_05_02_w");
+				$(".dropdown_05_03").toggleClass("dropdown_05_03 dropdown_05_03_w");
+				$(".dropdown_05_04").toggleClass("dropdown_05_04 dropdown_05_04_w");
+				$("#company_quicklook").show("slide", { direction: "down" }, 300);
+				$("#company_quicklook_wrapper").delay(100).fadeIn(300);
+			},
+			function(){
+				$("#company_quicklook_wrapper").hide();
+				$("#company_quicklook").hide("slide", { direction: "down" }, 400);
+				$("#index_toggle_button").css({"transform":"rotate(0deg)","-ms-transform":"rotate(0deg)","-webkit-transform":"rotate(0deg)","-o-transform":"rotate(0deg)","-moz-transform":"rotate(0deg)"}, 1000);
+				$(".dropdown_01_w").toggleClass("dropdown_01_w dropdown_01");
+				$(".dropdown_02_w").toggleClass("dropdown_02_w dropdown_02");
+				$(".dropdown_03_w").toggleClass("dropdown_03_w dropdown_03");
+				$(".dropdown_04_w").toggleClass("dropdown_04_w dropdown_04");
+				$(".dropdown_05_w").toggleClass("dropdown_05_w dropdown_05");
+				$(".dropdown_06_w").toggleClass("dropdown_06_w dropdown_06");
+				$(".dropdown_01_01_w").toggleClass("dropdown_01_01_w dropdown_01_01");
+				$(".dropdown_01_02_w").toggleClass("dropdown_01_02_w dropdown_01_02");
+				$(".dropdown_01_03_w").toggleClass("dropdown_01_03_w dropdown_01_03");
+				$(".dropdown_02_01_w").toggleClass("dropdown_02_01_w dropdown_02_01");
+				$(".dropdown_02_02_w").toggleClass("dropdown_02_02_w dropdown_02_02");
+				$(".dropdown_02_03_w").toggleClass("dropdown_02_03_w dropdown_02_03");
+				$(".dropdown_03_01_w").toggleClass("dropdown_03_01_w dropdown_03_01");
+				$(".dropdown_03_02_w").toggleClass("dropdown_03_02_w dropdown_03_02");
+				$(".dropdown_04_01_w").toggleClass("dropdown_04_01_w dropdown_04_01");
+				$(".dropdown_04_02_w").toggleClass("dropdown_04_02_w dropdown_04_02");
+				$(".dropdown_05_01_w").toggleClass("dropdown_05_01_w dropdown_05_01");
+				$(".dropdown_05_02_w").toggleClass("dropdown_05_02_w dropdown_05_02");
+				$(".dropdown_05_03_w").toggleClass("dropdown_05_03_w dropdown_05_03");
+				$(".dropdown_05_04_w").toggleClass("dropdown_05_04_w dropdown_05_04");
+				$(".bg_white").css({"background-color":"#FFFFFF"}, 300);
+				$("#index_toggle_tx01").fadeIn(300);
+				$("#index_toggle_tx02").hide();
+			});
+		});
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#bg_containers').cycle({
+				fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+			});
+		});
+		</script>
+		<script type="text/javascript">
+		$(function(){
+			$("#button_learn_more").append("<div class=hover></div>");
+			show();
+			function show(){
+				$("#button_learn_more").find("hover").fadeTo(2000,0,function(){
+				hide();});
+			}
+			function hide(){
+				$("#button_learn_more").find("hover").fadeTo(1000,1,function(){
+				show();});
+			}
+		})
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div id="welcome">
+		    <div class="window">
+		    	<div class="welcome-close"></div>
+		    	<div class="bloom">
+		    		<h1>Bloom</h1>
+		    		<h2>Visit our blog featuring retail growth and trends in Asia.</h2>
+		    		<p>Bloom is a great way to stay connected with retail trends in emerging markets throughout China, India, and Southeast Asia.</p>
+		    		<a href="http://blog.getchee.com/" target="_blank"><div class="welcome-button">Visit the Bloom blog now.</div></a>
+		    	</div>
+		    	<div class="newsletter">
+		    		<h1>Newsletters</h1>
+		    		<h2>Sign up to keep up-to-date with retail trends in Asia.</h2>
+		    		<p>We’ll email you weekly newsletters and keep you updated about retailers in Asia who use GIS and spatial technologies to increase productivity.</p>
+		    		<a href="http://www.getchee.com/newsletter/" target="_blank"><div class="welcome-button">Sign up for the newsletter now.</div></a>
+		    	</div>
+		    </div>
+	   </div>
+		<div id="preloaded_images">
+		   <img src="images/nav-sub.png" width="1" height="1" alt="Preload Image" />
+		</div>
+		<div style="display:hidden;" class="gallery clearfix"></div>
+		<header id="main-head-float">
+			<!--    LOGO    -->
+			<div id="logo">
+				<a href="index.html" target="_top"><img src="images/logo.png" alt="getchee, be market intelligent"></a>
+			</div>
+			<!--    Main Navigation    -->
+			<nav id="main_nav">
+				<ul id="dropdown" class="clear">
+					<li class="dropdown_01"><a href="about/our-company.html">About</a>
+						<ul>
+							<li class="dropdown_01_01"><a href="about/our-company.html">Our Company</a></li>
+							<li class="dropdown_01_02"><a href="about/our-clients.html">Our Clients</a></li>
+							<li class="dropdown_01_03"><a href="about/jobs.html">Jobs</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_02"><a href="industry/food-n-beverage.html">Industry</a>
+						<ul>
+							<li class="dropdown_02_01"><a href="industry/food-n-beverage.html">Food and Beverage</a></li>
+							<li class="dropdown_02_02"><a href="industry/merchandise-n-apparel.html">Merchandise and Apparel</a></li>
+							<li class="dropdown_02_03"><a href="industry/banking-n-finance.html">Banking and Finance</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_03"><a href="data/data-overview.html">Data</a>
+						<ul>
+							<li class="dropdown_03_01"><a href="data/data-overview.html">Data Overview</a></li>
+							<li class="dropdown_03_02"><a href="data/china-insight.html">China Insight</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_04"><a href="products/kiwi-overview.html">Products</a>
+						<ul>
+							<li class="dropdown_04_01"><a href="products/kiwi-overview.html">Kiwi Overview</a></li>
+							<li class="dropdown_04_02"><a href="http://www.getchee.com/kiwi/kiwi-support.html" target="_blank">Kiwi Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_05"><a href="services/services-overview.html">Services</a>
+						<ul>
+							<li class="dropdown_05_01"><a href="services/services-overview.html">Services Overview</a></li>
+							<li class="dropdown_05_02"><a href="services/city-ranking-study.html">City Ranking Study</a></li>
+							<li class="dropdown_05_03"><a href="services/network-optimization-study.html">Network Optimization Study</a></li>
+							<li class="dropdown_05_04"><a href="services/greenfield-market-study.html">Greenfield Market Study</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_06"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="index_animation_container" style="background-image: url(images/bg-store-network-optimization.png); background-position: top center; background-repeat: no-repeat;">
+			<div id="toggle_area" style="display:block">
+				<div class="wrapper">
+					<a href="#" id="index_toggle"><div id="index_toggle_button"></div><span id="index_toggle_tx01">Company Quicklook</span><span id="index_toggle_tx02" style="display:none;">Go Back</span></a>
+				</div>
+			</div>
+			<!--    BODY ARTICLE 02    -->
+			<div id="first_view_wrapper" style="top:290px">
+					<div class="main_title_small_black" id="fv_title">Store Network Optimization</div>
+					<div class="main_subtitle2" id="fv_sub">A solution for retail brands in Asia with over 50 stores.</div>
+					<a href="solutions/store-network-optimization.html" style="text-decoration: none;"><div id="button_learn_more">Learn More</div></a>
+			</div>
+			<div class="clear"></div>
+			<!--    BODY ARTICLE 03    -->
+			<div id="company_quicklook_wrapper">
+				<div class="main_title_small" id="cq_title">We’re a data services company.</div>
+				<div class="main_subtitle_white" id="cq_sub">We help the largest retail and bank brands in the world expand and thrive<br/>throughout emerging markets in China, India, and Southeast Asia.</div>
+			</div>
+			<div id="company_quicklook"></div>
+			<div class="clear"></div>
+			<!--    TOGGLE AREA    -->
+
+		</div>
+		<!--    FOOTER    -->
+		<div class="footer_top"></div>
+		<footer id="footer">
+			<div id="content">
+			<div class="wrapper">
+				<div class="footer-left">
+					<div class="footer-left-top">
+						<h2>&#8220;<q>Everywhere is walking distance if you have the time.</q>&#8221;</h2>
+						<h2 class="gray"><i>- Steven Wright</i></h2>
+						<p>Unfortunately, brand owners operating in Asia have little time for leisurely exploration. Now is the time for better, smarter planning and execution for emerging markets.</p>
+					</div>
+					<div class="footer-left-middle">
+						<h2>Our Blog</h2>
+					</div>
+					<div id="footer-left-bottom-left">
+						<dl>
+							<dd>Visit <a href="http://blog.getchee.com/" target="_blank">our blog</a> for current retail news and trends happening throughout emerging markets in Asia.</dd>
+						</dl>
+					</div>
+					<div id="footer-left-bottom-right">
+						<nav>
+							<ul class="social_network">
+								<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="images/nav-social-network-linkedin.png" class="ro" alt="LinkedIn"></a></li>
+								<li><a href="https://www.facebook.com/teamgetchee" target="_blank" title="Facebook"><img src="images/nav-social-network-facebook.png" class="ro" alt="Facebook"></a></li>
+								<li><a href="http://twitter.com/getchee" target="_blank" title="Twitter"><img src="images/nav-social-network-twitter.png" class="ro" alt="Twitter"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-right-top">
+						<h1>We provide market insight, tools, and services to help brands thrive in Asia. <a href="about/our-company.html" title="Learn More">Learn More</a>.</h1>
+					</div>
+					<h2 id="curious">Curious? Get in touch.</h2><div id="thank" style="display:none"><span class="text_white">Thank You!</span> We'll be in touch with you soon.</div>
+					<form action="s2form/process.php" method="post" accept-charset="utf-8" id="contact-form" name="form" onSubmit="return checkFields()" autocomplete="off">
+						<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="Name">
+						<input name="email" id="email" class="validate[required,custom[email]] youremail star" type="text" placeholder="Email">
+						<textarea name="message" id="message" class="validate[required] textarea star" type="text" placeholder="Question"></textarea>
+						<!-- Begin Catpcha -->
+						<div id="qna">
+						<label for="captcha" id="captcha_question"></label>
+						<input type="text" name="" value="" id="captcha">
+						<p id="captcha_error">Captcha test failed. Please try again.</p>
+						<script src="s2form/captcha.js" ></script>
+						</div>
+						<!-- End Captcha -->
+						<input type="hidden" name="tags" value="Leads from Website - Curious. Index.">
+						<div class="left_f gallery clearfix" style="width:350px;">
+							<input type="checkbox" class="styled" name="newsletter subscription" value="Yes" checked="checked"/>
+							<span class="checkbox_label">Signup for our newsletter.</span>
+							<ul class="newsletter_link">
+								<li class="preview"><a href="images/newsletter-preview.png" rel="prettyPhoto" title="">Preview</a></li>
+								<li class="archive"><a href="http://us6.campaign-archive2.com/home/?u=dee2b153b95bd76c8bbc6a009&id=9b3db0ba54" target="_blank">Archive</a></li>
+							</ul>
+						</div>
+						<div class="right_f">
+							<input type="submit" class="button dark" name="subbut" value="Send" id="btnSignUp"/>
+						</div>
+					</form>
+
+					<!--[if IE]>
+					  <script>
+					   // To test the @id toggling on password inputs in browsers that don¡¦t support changing an input¡¦s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+					   // jQuery.fn.hide = function() { return this; }
+					   // Then uncomment the last rule in the <style> element (in the <head>).
+					   $(function() {
+						// Invoke the plugin
+						$('input, textarea').placeholder();
+						// That¡¦s it, really.
+						// Now display a message if the browser supports placeholder natively
+						var html;
+						if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won¡¦t run in this case, since it¡¦s not needed. If you want to test the plugin, use an older browser ;)';
+						} else if ($.fn.placeholder.input) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+						}
+						if (html) {
+						 $('<p class="note">' + html + '</p>').insertAfter('form');
+						}
+					   });
+					  </script>
+					<![endif]-->
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav_area">
+			<div class="wrapper">
+				<nav>
+					<ul class="footer_nav">
+						<li><a href="privacy-policy.html" target="_top" title="Privacy Policy">Privacy Policy</a></li>
+						<li><a href="terms-of-use.html" target="_top" title="Terms of Use">Terms of Use</a></li>
+						<li id="last" title="中文版"><a href=javascript:lang_change("cn");>中文版</a></li>
+					</ul>
+				</nav>
+				<small>&copy; <script>document.write((new Date()).getFullYear());</script> getchee. All rights reserved.</small>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+		</script>
+		</footer>
+	</body>
+</html>

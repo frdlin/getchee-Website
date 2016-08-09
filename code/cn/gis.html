@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>getchee – GIS (Geographic Information System) for Retail Benefit</title>
+		<meta name="description" content="零售商可透过利用以地理信息系统为基础的数据、服务与工具获得市场洞察力，发掘让人意想不到的好处。">
+		<meta name="keywords" content="市场规模分析, 市场潜力分析, 零售网络优化, 零售点验证">
+		<link rel="stylesheet" href="css/n-public.css" />
+		<link rel="stylesheet" href="css/n-header.css" />
+		<link rel="stylesheet" href="css/n-footer.css" />
+		<link rel="stylesheet" href="css/n-form.css" />
+		<link rel="stylesheet" href="css/n-index.css" />
+		<link rel="stylesheet" href="css/n-prettyPhoto.css" />
+		<link rel="stylesheet" href="css/new_style.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="../js/jquery-1.6.1.min.js" ></script>
+		<script src="../js/global-scripts.js" ></script>
+		<script src="../js/jquery.dropdown.js" ></script>
+		<script src="../js/custom-form-elements.js" ></script>
+		<script src="../js/jquery.prettyPhoto.js" ></script>
+		<script src="../js/jquery.placeholder.js" ></script>
+		<script src="../js/jquery.anchor.js" ></script>
+		<script src="../js/float.js" ></script>
+		<script src="../js/canvas.js" ></script>
+		<script src="../js/jquery.validationEngine-zh_CN.js" ></script>
+		<script src="../js/jquery.validationEngine.js" ></script>
+		<script src="../js/jquery.cycle.lite.min.js" ></script>
+		<script src="../js/html5gallery.js"></script>
+		<script src="../js/slideshow2.js"></script>
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#contact-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+			});
+		</script>
+
+		<script>
+			$(document).ready(function() {
+				$('.language_switch').click(function(){
+			    	$('.language').toggle('fast');
+				});
+			});
+		</script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btnSignUp").click(function(){
+				setTimeout(function(){
+					$("#curious").hide();
+					$("#thank").fadeIn(1500);
+					$('#contact-form').find(':input').each(function(){
+						var type = this.type, tag = this.tagName.toLowerCase();
+						if (type == 'text' || type == 'password' || tag == 'textarea')
+							this.value = '';
+						<!--else if (type == 'checkbox' || type == 'radio')-->
+						<!--this.checked = false;-->
+						<!--else if (tag == 'select')-->
+						<!--this.selectedIndex = -1;
+					})
+				}, 6000);
+				setTimeout(function(){
+					$("#thank").hide();
+					$("#curious").fadeIn(1500);
+					$("#btnSignUp").attr("disabled", false);
+				}, 12000);
+			});
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#contact-form").get(0).reset();
+			$("#contact-form")[0].reset();
+		});
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+	<div id="big">
+		<div id="abgne_float_ad" >
+			<a href="#footer_nav_area" class="anchorLink"><img src="images/curious.png" width="120" height="69" alt="Link to contact form" style="height:69; width:120; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/curious.png', sizingMethod='scale');"></a>
+		</div>
+	</div>
+		<!--    HEADER    -->
+		<header id="main-head-new">
+			<!--    LOGO    -->
+			<div class="header_nav">
+				<div class="main_wrap">
+					<div class="header-left">
+						<ul>
+							<li class="border"><a href="http://blog.getchee.com/" target="_blank" title="Our Blog">我们的博客</a></li>
+							<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="images/header-social-linkedin.png" class="ro" alt="LinkedIn"/></a></li>
+							<li class="narrow"><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="images/header-social-youku.png" class="ro" alt="优酷"/></a></li>
+							<li class="narrow border"><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="images/header-social-sinaweibo.png" class="ro" alt="新浪微博"/></a></li>
+							<li class="border"><a href="mailto:marketing@getchee.com" target="_blank" title="marketing@getchee.com"><img src="images/header-mail.png" alt="Email"/></a></li>
+							<li><img src="images/header-phone.png" alt="Phone"/></li>
+							<li class="narrow">+886 2 7722 3600</li>
+						</ul>
+					</div>
+					<div class="header-right">
+						<ul>
+							<li>电子报订阅</li>
+							<li class="narrow2">
+								<form action="http://getchee.us6.list-manage1.com/subscribe/post" method="POST">
+									<input type="hidden" name="u" value="dee2b153b95bd76c8bbc6a009">
+									<input type="hidden" name="id" value="811abd86dd">
+
+									<div id="mergeTable" class="mergeTable" style="float:left;">
+										<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+											<div class="field-group">
+												<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" class="header_email" value="" placeholder="邮件地址">
+											</div>
+										</div>
+									</div>
+
+									<div id="interestTable">
+										<div id="mergeRow-100-9529" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Product interest shown</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_1"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[9529][1]" value="1" class="av-checkbox">Data interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_2"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_2" name="group[9529][2]" value="1" class="av-checkbox">Market Entry Interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_4"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_4" name="group[9529][4]" value="1" class="av-checkbox">Network Optimization Interest</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9537" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>No Product interest</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_8"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_8" name="group[9537][8]" value="1" class="av-checkbox">No Product Interest shown</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9649" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Qualified leads</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_16"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_16" name="group[9649][16]" value="1" class="av-checkbox">Qualified lead</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_32"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_32" name="group[9649][32]" value="1" class="av-checkbox">Pending deal</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_64"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_64" name="group[9649][64]" value="1" class="av-checkbox">Purchased services</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+									</div>
+
+								<!-- real people should not fill this in and expect good things -->
+									<div style="position: absolute; left: -5000px;">
+										<input type="text" name="b_dee2b153b95bd76c8bbc6a009_811abd86dd" value="">
+									</div>
+									<input type="submit" value="Send" class="header_submit" alt="Subscribe Button"/>
+								</form>
+							</li>
+							<li class="narrow3">
+								<ul class="language_switch">
+									<li><a href="#">中文</a>
+										<ul>
+											<li class="language"><a href=javascript:lang_change("us");>English</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="main_nav">
+				<nav class="main_wrap">
+					<div class="logo_new"><a href="index.html" target="_top"><img src="images/logo.png" alt="getchee"/></a></div>
+					<ul class="main_menu">
+						<li><a href="about/our-company.html">关于我们</a>
+							<ul>
+								<li><a href="about/our-company.html">我们的公司</a></li>
+								<li><a href="about/our-clients.html">我们的客户</a></li>
+							</ul>
+						</li>
+						<li><a href="industry/food-n-beverage.html">行业</a>
+							<ul>
+								<li><a href="industry/food-n-beverage.html">餐饮</a></li>
+								<li><a href="industry/merchandise-n-apparel.html">商品与服装</a></li>
+								<li><a href="industry/banking-n-finance.html">银行与金融</a></li>
+							</ul>
+						</li>
+						<li><a href="data/data-overview.html">数据</a>
+							<ul>
+								<li><a href="data/data-overview.html">数据简介</a></li>
+								<li><a href="data/china-insight.html">中国透视</a></li>
+							</ul>
+						</li>
+						<li><a href="products/kiwi-overview.html">平台</a>
+							<ul>
+								<li><a href="products/kiwi-overview.html">Kiwi 简介</a></li>
+								<li><a href="http://www.getchee.com/kiwi/kiwi-support.html">Kiwi 支持</a></li>
+							</ul>
+						</li>
+						<li><a href="services/services-overview.html">服务</a>
+							<ul>
+								<li><a href="services/services-overview.html">服务简介</a></li>
+								<li><a href="services/city-ranking-study.html">城市排名研究</a></li>
+								<li><a href="services/network-optimization-study.html">网络优化研究</a></li>
+								<li><a href="services/greenfield-market-study.html">未开发地区市场研究</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html">联系我们</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="clear"></div>
+		<!--    BODY ARTICLE    -->
+		<div class="title_section" style="background-image: url(images/background/webBack1.png);">
+			<div class="title_wrap_two">
+				<h1>零售业 GIS</h1>
+				<h2>地理信息系统</h2>
+			</div>
+		</div>
+		<div class="main_wrap">
+			<div class="center">
+				<img src="images/index-whats-gis.png" class="alone" alt="GIS map"/>
+				<div id="icon_gis">
+					<ul>
+						<li class="save_time">节省时间</li>
+						<li class="cut_costs">削减成本</li>
+						<li class="improve_decisions">提升决策</li>
+						<li class="better_records">完善的档案管理</li>
+						<li class="more_transparency">更具透明度</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<hr>
+		<section class="grey_section">
+			<div class="main_wrap">
+				<div class="column_half">
+					<h4 class="s">什么是 GIS?</h4>
+					<h5>GIS 结合了硬软件与数据，为您收集、管理、分析以地点为基础的各项资料。</h5>
+					<p>GIS 透过全方位的理解、探究并将数据视觉化，深入揭露无法从一般表格与资料库的查询中可获取之型态、发展趋势与关连性等讯息。</p>
+					<p class="bottom">GIS 输出包含地图、报告、各式表格等各类资讯，能快速简单的理解与共享。</p>
+				</div>
+				<div class="column_half_last">
+					<h4 class="s">优点与方法</h4>
+					<h5>采用 GIS 系统帮助您做出更准确更客观的商业决策。</h5>
+					<p><span class="hilight">优点</span> — GIS 协助各行各业强化档案管理、改善沟通、节省成本与时间，并透过客观的知识增进商业决策。</p>
+					<p class="bottom"><span class="hilight">方法</span> — GIS 始于找寻研究与分析取得的数据，并于深入了解学习之后发挥作用。</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<div class="data_overview_second_cross">
+			<div class="cross_float">
+				<div class="center_wrap">
+					<div class="cross_box_center">近 70% 的业务数据皆含括了地点要素</div>
+				</div>
+			</div>
+				<div class="half_grey"></div>
+				<div class="grey_line"></div>
+                <div class="half_white"></div>
+		</div>
+
+		<section class="white_section">
+			<div class="main_wrap">
+				<h4 class="s" id="points_of_interest">实际零售业应用</h4>
+				<h5>GIS 对零售业的开发运作之裨益，含括近乎所有行销与金融的主要商业规律，協助您品牌的商品及服務更貼近目標客戶群。</h5>
+					<div class="column_one_third">
+						<p><span class="hilight">数据与资产管理</span> — 透过 GIS 的<a href="products/kiwi-overview.html">工具与技术</a>，协助您成为更优秀的档案管理者。持续追踪您销售点数据与客户地址等数位资产，以及您所有之门店与竞争者所在的实体资产，赋予您的团队制定绝佳策略以期能获得更大的市场占有率。</p>
+                        <p class="bottom">远端资料存取，提供您的团队省去非必要的书面纪录，並大幅度增進資訊收集之速度與準確性。</p>
+					</div>
+					<div class="column_one_third">
+					  <p><span class="hilight">规划与分析</span> — 透过空间储存数据的市场分析，协助您发掘该地区尚未开发的潜力。更有效的规划与优化您的零售覆盖区，尽可能的达到目标客群的最大数量。调整区域行销费以获取最佳报酬。</p>
+						<p class="bottom">GIS <a href="../market-sizing-analysis.html">按规模分类市场</a>，<a href="retail-site-validation.html">验证新据点</a>与区域目标的客观见解，是您了解既有或潜在<a href="market-potential-analysis.html">市场商机</a>的基准线。</p>
+					</div>
+					<div class="column_one_third_last">
+						<p><span class="hilight">认知与企业应用</span> — 透过输出报告与仪表板，建立跨组织的透明度。您的行销团队结合开发团队的发现，经营团队亦可获得包含您店铺网络的供应链人员配置关键绩效指标与风险管理等即时讯息。</p>
+                        <p class="bottom">无论是作为一个独立的系统或是与 BI/ERP 工具​​做结合，GIS 都能称职的协助企业内各部门顺利运作沟通无碍。</p>
+					</div>
+			</div>
+			<div class="clear"></div>
+		</section>
+		<!--    FOOTER    -->
+		<div class="footer_top"></div>
+		<footer id="footer">
+			<div id="content">
+			<div class="wrapper">
+				<div class="footer-left">
+					<div class="footer-left-top">
+						<h2>&#8220;<q>只要你有时间，天涯近在咫尺</q>&#8221;</h2>
+						<h2 class="gray"><i>- Steven Wright</i></h2>
+						<p>遗憾的是，在亚洲经营的品牌所有者很少有时间能从容的进行扩展；更高明的规划并运行新兴市场，现在正是时候。</p>
+					</div>
+					<div class="footer-left-middle">
+						<h2>我们的博客</h2>
+					</div>
+					<div id="footer-left-bottom-left">
+						<dl>
+							<dd>浏览<a href="http://blog.getchee.com/" target="_blank">我们的博客</a>，与亚洲新兴市场零售产业信息与趋势时刻保持同步。</dd>
+						</dl>
+					</div>
+					<div id="footer-left-bottom-right">
+						<nav>
+							<ul class="social_network">
+								<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="images/nav-social-network-linkedin.png" class="ro" alt="LinkedIn"></a></li>
+								<li><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="images/nav-social-network-youku.png" class="ro" alt="优酷"></a></li>
+								<li><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="images/nav-social-network-weibo.png" class="ro" alt="新浪微博"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-right-top">
+						<h1>我们提供市场洞察力、工具和服务，帮助品牌在亚洲蓬勃发展。<a href="about/our-company.html" title="Learn More">了解更多</a></h1>
+					</div>
+					<h2 id="curious">有疑问？请与我们联系。</h2><div id="thank" style="display:none"><span class="text_white">感谢您！</span>我们将尽快与您联系。</div>
+					<form action="../s2form/process.php" method="post" accept-charset="utf-8" id="contact-form" name="form" onSubmit="return checkFields()" autocomplete="off">
+						<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="姓名">
+						<input name="email" id="email" class="validate[required,custom[email]] youremail star" type="text" placeholder="邮件地址">
+						<textarea name="message" id="message" class="validate[required] star" type="text" placeholder="问题"></textarea>
+						<!-- Begin Catpcha -->
+						<div id="qna">
+						<label for="captcha" id="captcha_question"></label>
+						<input type="text" name="" value="" id="captcha">
+						<p id="captcha_error">Captcha test failed. Please try again.</p>
+						<script src="../s2form/captcha.js" ></script>
+						</div>
+						<!-- End Captcha -->
+						<div style="display:hidden;" class="gallery clearfix"></div>
+						<input type="hidden" name="tags" value="Leads from Website - Curious. Contact us. Chinese.">
+						<div class="left_f" style="width:350px;">
+							<input type="checkbox" class="styled" name="newsletter subscription" value="Yes" checked="checked"/>
+							<span class="checkbox_label gallery clearfix">注册我们的新闻通讯。 
+							<ul class="newsletter_link">
+								<li class="preview"><a href="images/newsletter-preview.png" rel="prettyPhoto" title="">预览</a></li>
+								<li class="archive"><a href="http://us6.campaign-archive2.com/home/?u=dee2b153b95bd76c8bbc6a009&id=9b3db0ba54" target="_blank">存档</a></li>
+							</ul>
+						</div>
+						<div class="right_f">
+							<input type="submit" class="button dark" name="subbut" value="发送" id="btnSignUp" />
+						</div>
+					</form>
+					<!--[if IE]>
+					  <script>
+					   // To test the @id toggling on password inputs in browsers that don¡¦t support changing an input¡¦s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+					   // jQuery.fn.hide = function() { return this; }
+					   // Then uncomment the last rule in the <style> element (in the <head>).
+					   $(function() {
+						// Invoke the plugin
+						$('input, textarea').placeholder();
+						// That¡¦s it, really.
+						// Now display a message if the browser supports placeholder natively
+						var html;
+						if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won¡¦t run in this case, since it¡¦s not needed. If you want to test the plugin, use an older browser ;)';
+						} else if ($.fn.placeholder.input) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+						}
+						if (html) {
+						 $('<p class="note">' + html + '</p>').insertAfter('form');
+						}
+					   });
+					  </script>
+					<![endif]-->
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav_area">
+			<div class="wrapper">
+				<nav>
+					<ul class="footer_nav">
+						<li><a href="privacy-policy.html" target="_top" title="Privacy Policy">隐私条款</a></li>
+						<li><a href="terms-of-use.html" target="_top" title="Terms of Use">使用条款</a></li>
+						<li id="last" title="English"><a href=javascript:lang_change("us");>English</a></li>
+					</ul>
+				</nav>
+				<small>&copy; <script>document.write((new Date()).getFullYear());</script> 磐讯版权所有</small>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); 
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff006ceda7e9720c677698e08dab44f47' type='text/javascript'%3E%3C/script%3E")); 
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+		</script>
+		</footer>
+	</body>
+</html>

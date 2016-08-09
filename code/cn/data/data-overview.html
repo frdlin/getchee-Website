@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>getchee - 中国、印度和东南亚具有附加值的人口和商业点数据</title>
+		<meta name="description" content="我们维护在整个亚洲市场的商用最大空间数据库之一。">
+		<meta name="keywords" content="地理编码人口和商业点数据, 中国, 印度, 东南亚, 新兴市场, 市场潜力, 消费者细分, 人口与财富分布, 零售与银行品牌, 竞争对手跟踪, 蚕食">
+		<link rel="stylesheet" href="../css/n-public.css" />
+		<link rel="stylesheet" href="../css/n-header.css" />
+		<link rel="stylesheet" href="../css/n-footer.css" />
+		<link rel="stylesheet" href="../css/n-form.css" />
+		<link rel="stylesheet" href="../css/n-prettyPhoto.css" />
+		<link rel="stylesheet" href="../css/new_style.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="../../js/jquery-1.6.1.min.js" ></script>
+		<script src="../../js/global-scripts.js" ></script>
+		<script src="../../js/jquery.dropdown.js" ></script>
+		<script src="../../js/custom-form-elements.js" ></script>
+		<script src="../../js/jquery.prettyPhoto.js" ></script>
+		<script src="../../js/jquery.placeholder.js" ></script>
+		<script src="../../js/jquery.anchor.js" ></script>
+		<script src="../../js/float.js" ></script>
+		<script src="../../js/jquery.validationEngine-zh_CN.js" ></script>
+		<script src="../../js/jquery.validationEngine.js" ></script>
+		<script src="../../js/jquery.cycle.lite.min.js" ></script>
+		<script src="../../js/html5gallery.js"></script>
+		<script src="../../js/slideshow2.js"></script>
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#contact-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+			});
+		</script>
+
+		<script>
+			$(document).ready(function() {
+				$('.language_switch').click(function(){
+			    	$('.language').toggle('fast');
+				});
+			});
+		</script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btnSignUp").click(function(){
+				setTimeout(function(){
+					$("#curious").hide();
+					$("#thank").fadeIn(1500);
+					$('#contact-form').find(':input').each(function(){
+						var type = this.type, tag = this.tagName.toLowerCase();
+						if (type == 'text' || type == 'password' || tag == 'textarea')
+							this.value = '';
+						<!--else if (type == 'checkbox' || type == 'radio')-->
+						<!--this.checked = false;-->
+						<!--else if (tag == 'select')-->
+						<!--this.selectedIndex = -1;
+					})
+				}, 6000);
+				setTimeout(function(){
+					$("#thank").hide();
+					$("#curious").fadeIn(1500);
+					$("#btnSignUp").attr("disabled", false);
+				}, 12000);
+			});
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#contact-form").get(0).reset();
+			$("#contact-form")[0].reset();
+		});
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+	<div id="big">
+		<div id="abgne_float_ad" >
+			<a href="#footer_nav_area" class="anchorLink"><img src="../images/curious.png" width="120" height="69" alt="Link to contact form" style="height:69; width:120; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/curious.png', sizingMethod='scale');"></a>
+		</div>
+	</div>
+		<!--    HEADER    -->
+		<div style="display:hidden;" class="gallery clearfix"></div>
+		<header id="main-head-new">
+			<!--    LOGO    -->
+			<div class="header_nav">
+				<div class="main_wrap">
+					<div class="header-left">
+						<ul>
+							<li class="border"><a href="http://blog.getchee.com/" target="_blank" title="Our Blog">我们的博客</a></li>
+							<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="../images/header-social-linkedin.png" class="ro" alt="LinkedIn"/></a></li>
+							<li class="narrow"><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="../images/header-social-youku.png" class="ro" alt="优酷"/></a></li>
+							<li class="narrow border"><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="../images/header-social-sinaweibo.png" class="ro" alt="新浪微博"/></a></li>
+							<li class="border"><a href="mailto:marketing@getchee.com" target="_blank" title="marketing@getchee.com"><img src="../images/header-mail.png" alt="Email"/></a></li>
+							<li><img src="../images/header-phone.png" alt="Phone"/></li>
+							<li class="narrow">+886 2 7722 3600</li>
+						</ul>
+					</div>
+					<div class="header-right">
+						<ul>
+							<li>电子报订阅</li>
+							<li class="narrow2">
+								<form action="http://getchee.us6.list-manage1.com/subscribe/post" method="POST">
+									<input type="hidden" name="u" value="dee2b153b95bd76c8bbc6a009">
+									<input type="hidden" name="id" value="811abd86dd">
+
+									<div id="mergeTable" class="mergeTable" style="float:left;">
+										<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+											<div class="field-group">
+												<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" class="header_email" value="" placeholder="邮件地址">
+											</div>
+										</div>
+									</div>
+
+									<div id="interestTable">
+										<div id="mergeRow-100-9529" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Product interest shown</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_1"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[9529][1]" value="1" class="av-checkbox">Data interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_2"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_2" name="group[9529][2]" value="1" class="av-checkbox">Market Entry Interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_4"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_4" name="group[9529][4]" value="1" class="av-checkbox">Network Optimization Interest</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9537" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>No Product interest</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_8"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_8" name="group[9537][8]" value="1" class="av-checkbox">No Product Interest shown</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9649" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Qualified leads</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_16"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_16" name="group[9649][16]" value="1" class="av-checkbox">Qualified lead</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_32"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_32" name="group[9649][32]" value="1" class="av-checkbox">Pending deal</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_64"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_64" name="group[9649][64]" value="1" class="av-checkbox">Purchased services</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+									</div>
+
+								<!-- real people should not fill this in and expect good things -->
+									<div style="position: absolute; left: -5000px;">
+										<input type="text" name="b_dee2b153b95bd76c8bbc6a009_811abd86dd" value="">
+									</div>
+									<input type="submit" value="Send" class="header_submit" alt="Subscribe Button"/>
+								</form>
+							</li>
+							<li class="narrow3">
+								<ul class="language_switch">
+									<li><a href="#">中文</a>
+										<ul>
+											<li class="language"><a href=javascript:lang_change("us");>English</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="main_nav">
+				<nav class="main_wrap">
+					<div class="logo_new"><a href="index.html" target="_top"><img src="../images/logo.png" alt="getchee"/></a></div>
+					<ul class="main_menu">
+						<li><a href="../about/our-company.html">关于我们</a>
+							<ul>
+								<li><a href="../about/our-company.html">我们的公司</a></li>
+								<li><a href="../about/our-clients.html">我们的客户</a></li>
+							</ul>
+						</li>
+						<li><a href="../industry/food-n-beverage.html">行业</a>
+							<ul>
+								<li><a href="../industry/food-n-beverage.html">餐饮</a></li>
+								<li><a href="../industry/merchandise-n-apparel.html">商品与服装</a></li>
+								<li><a href="../industry/banking-n-finance.html">银行与金融</a></li>
+							</ul>
+						</li>
+						<li><a href="data-overview.html">数据</a>
+							<ul>
+								<li><a href="data-overview.html">数据简介</a></li>
+								<li><a href="china-insight.html">中国透视</a></li>
+							</ul>
+						</li>
+						<li><a href="../products/kiwi-overview.html">平台</a>
+							<ul>
+								<li><a href="../products/kiwi-overview.html">Kiwi 简介</a></li>
+								<li><a href="http://www.getchee.com/kiwi/kiwi-support.html">Kiwi 支持</a></li>
+							</ul>
+						</li>
+						<li><a href="../services/services-overview.html">服务</a>
+							<ul>
+								<li><a href="../services/services-overview.html">服务简介</a></li>
+								<li><a href="../services/city-ranking-study.html">城市排名研究</a></li>
+								<li><a href="../services/network-optimization-study.html">网络优化研究</a></li>
+								<li><a href="../services/greenfield-market-study.html">未开发地区市场研究</a></li>
+							</ul>
+						</li>
+						<li><a href="../contact.html">联系我们</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="clear"></div>
+		<!--    BODY ARTICLE    -->
+		<div class="title_section" style="background-image: url(../images/background/webBack1.png);">
+			<div class="title_wrap_two">
+				<h1>市场数据</h1>
+				<h2>我们维护在整个亚洲市场的商用最大空间数据库之一。</h2>
+			</div>
+		</div>
+		<div class="main_wrap">
+			<section class="white_section">
+				<div class="column_half">
+					<h4 class="s">我们都做些什么？</h4>
+					<h5>我们创造中国、印度和东南亚具有附加值的人口和商业点数据。</h5>
+					<p class="bottom">透过专有模型，我们创建了定义不同<a href="#demographic_segments" class="anchorLink">人口统计细分</a>市场的 1 平方公里 – 500 平方米网格。这类似但却不尽相同于美国的街区群。我们还维护一个品牌的位置和与该点位的相关业务属性数据的跟踪数据库。</p>
+				</div>
+				<div class="column_half_last">
+					<h4 class="s">您如何获益？</h4>
+					<h5>您的组织可善用这些数据，在亚洲推行一个更为有效的全新市场规画。</h5>
+					<p class="bottom">您的业务、行销与开发团队，基于有效验证更高的潜力，增进了解市场环境，能命中更好的目标区。这些数据我们提供可<a href="../services/services-overview.html">咨询输出</a>的 BI 工具，或者您可以通过我们的 <a href="../products/kiwi-overview.html">Kiwi&trade;</a> 软件了解它的意义。</p>
+				</div>
+			<div class="clear"></div>
+			</section>
+		</div>
+		<div class="data_overview_first_cross">
+			<div class="cross_float">
+				<div class="center_wrap">
+					<div class="first_cross_side">
+						<div class="gallery clearfix cross_box_left"><a href="../images/data-overview-supported-geographies.png" rel="prettyPhoto">支持超过 100 个城市</a></div>
+					</div>
+					<div class="first_cross_center">
+						<img src="../images/data-overview-cross-01.png" alt="Market Data">
+					</div>
+					<div class="first_cross_side">
+						<div class="cross_box_right"><a href="china-insight.html">中国透视</a></div>
+					</div>
+				</div>
+			</div>
+				<div class="half_white"></div>
+				<div class="grey_line"></div>
+				<div class="half_grey"></div>
+		</div>
+		<section class="grey_section">
+		<div class="main_wrap">
+			<div class="column_half">
+				<h4 class="s" id="demographic_segments">人口细分</h4>
+				<h5>了解目标消费者和市场潜力所规范的市场细分制度。</h5>
+				<p class="bottom">如果您曾使用过如<a href="http://www.claritas.com/sitereports/reports/prizm-demographics-reports.jsp" target="_blank">尼尔森的 PRIZM</a> 或 <a href="http://www.esri.com/data/esri_data/tapestry.html" target="_blank">ESRI 的 Tapestry</a> 人口细分产品，那么您可通过 getchee 的细分数据帮助您达成许多类似的目的如了解谁是您的客户、他们的行为模式以及如何找到他们。</p>
+			</div>
+			<div class="column_half_last">
+				<p>由于亚洲政府的普查数据与美国和欧洲相比往往要少得多，getchee 依靠方法论把数据撒到网格中（1 平方公里 – 500 平方米的网格）的独特方法成为业界翘楚。</p>
+				<p class="bottom">我们透过这个方式建立了一个跨亚洲地域标准化的市场细分系统。有了它，您可以更了解您的目标消费者，确定财富的领域，更有效地了解流动人口。</p>
+			</div>
+			<div class="clear"></div>
+			<div class="grey_line_50"></div>
+			<div class="column_one_third">
+				<p><span class="hilight">网格细分</span>－政府通常会在一个高水平的角度上提供稀疏间隔的人口信息。例如中国 2000 年和 2010 年的人口普查之间有 10 年的差距，最精细的单位到县级市。</p>
+				<p>我们的核心价值是让策略规划人员，有效地透过我们的方法与技术创造更小更精细的测量单位。</p>
+				<dl class="product_video_container_bottom">
+					<dt><img src="../images/i-data-total-population.png" alt="Total population in Taipei, Taiwan"></dt>
+					<dd class="container_label">台湾台北总人口</dd>
+				</dl>
+			</div>
+			<div class="column_one_third">
+				<p><span class="hilight">网格密度</span>－我们使用一种颜色编码系统，通过数字地图显示范围内的人口密度。快速了解细分市场的分布，这是非常有用的。用这种方法，我们可以显示在总人口中的分布、工作人口、家庭数量、富裕人群和年龄。</p>
+				<p>在许多与我们与客户的交往中，我们创建基于对他们的业务和目标客户的要求定制的分布密度。</p>
+				<dl class="product_video_container_bottom">
+					<dt><img src="../images/i-data-working-population.png" alt="Working population in Shanghai, China"></dt>
+					<dd class="container_label">中国上海工作人口</dd>
+				</dl>
+			</div>
+			<div class="column_one_third_last">
+				<div id="aside_box_white">
+					<h5 class="hilight">聚焦亚洲市场</h5>
+					<ul class="round">
+						<li><span class="hilight">亚太地区</span><br />中国、印度尼西亚、韩国、马来西亚、菲律宾、新加坡、台湾、泰国</li>
+						<li><span class="hilight">印度及中东</span><br />印度、土耳其、阿拉伯联合酋长国</li>
+					</ul>
+				</div>
+				<div id="aside_box_white_bottom">
+					<h5 class="hilight">基本层</h5>
+					<ul class="round">
+						<li>地区生产总值 (GRP)</li>
+						<li>总人口</li>
+						<li>男性总人口</li>
+						<li class="last">女性总人口</li>
+					</ul>
+					<h5 class="hilight">高级层</h5>
+					<ul class="round">
+						<li>年龄与性别分布</li>
+						<li>总住户数</li>
+						<li>总劳动人口</li>
+						<li>财富细分</li>
+					</ul>
+					<em class="tiny">* 不同地区数据可能会有所不同</em>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="grey_line_50"></div>
+			<div class="column_two_third">
+				<p><span class="hilight" id="wealth_segmentation">财富分配</span>－想要知道跨城市，地区或国家的财富分配？我们拥有整个亚洲地域的财富分配模式。这个数据被这些市场的零售客户和银行客户用来更好地调整自己的产品和品牌定位。<a href="mailto:curious@getchee.com?Subject=Ask%20us">查询我们</a>在中国、印度和东南亚的不同种类的财富和富裕阶层分类。</p>
+				<div class="column_one_third">
+					<dl class="product_video_container_bottom">
+						<dt><img src="../images/i-data-wealth-distribution-china.png" alt="Wealth distribution in Beijing, China"></dt>
+						<dd class="container_label">中国北京的财富分布</dd>
+					</dl>
+				</div>
+				<div class="column_one_third_last">
+					<dl class="product_video_container_bottom">
+						<dt><img src="../images/i-data-wealth-distribution-indonesia.png" alt="Wealth distribution in Jakarta, Indonesia"></dt>
+						<dd class="container_label">印尼雅加达的财富分布</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="column_one_third_last">
+				<p><span class="hilight">零售用途</span>－你在你的零售网点的产品种类和功能有哪些？你如何制定适合市场的定价策略？通过了解你的市场财富情况，可以更好地进行销售、营销和扩张计划。</p>
+				<p class="bottom"><span class="hilight">银行用途</span>－哪家银行分支机构应该有优质的服务？哪家分支机构应迎合上、中、下不同的阶层？通过分析财富分布可以更好地回答这些问题。</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		</section>
+		<div class="grey_line"></div>
+		<section class="white_section">
+			<div class="main_wrap">
+				<h4 class="s" id="points_of_interest">兴趣点</h4>
+				<h5>我们追踪和维护成千上万的地理编码点的数据，这些数据被称之为 POI。这些兴趣点是帮助您理解和评价总额和净市场潜力的市场环境的关键因素。</h5>
+					<div class="column_one_third">
+						<p><span class="hilight">地理编码点</span>－我们使用不同的技术，包括网站调研、实地调查、第三方厂商和人群现场采集来收集不同类别的兴趣点。这些类别可以细化到交通便捷、商业、生活形态、住宅、旅游点等数据。</p>
+						<p>想知道在曼谷的所有银行和 ATM 的位置吗？</p>
+						<p>需要在中国找到所有的主要服装运动品牌的零售点吗？</p>
+						<dl class="product_video_container_bottom">
+							<dt><img src="../images/i-data-fast-food.png" alt="Fast food restaurants in Dalian, China"></dt>
+							<dd class="container_label">中国大连快餐店分布</dd>
+						</dl>
+					</div>
+					<div class="column_one_third">
+						<p><span class="hilight">位置属性</span>－在许多情况下，我们收集的不仅仅是我们的 POI 数据的经度和纬度。我们收集的是更重要的信息，需要进行商业智能和战略分析，包括但不仅限于品牌名称、地址、电话号码、类型和大小。</p>
+						<p>例如，在中国，我们几乎可以映射到排名前 50 位城市的购物中心每一个点。我们可以告诉你大多数映射点的规模、品牌类别、品类的定义以及停车场情况。</p>
+						<dl class="product_video_container_bottom">
+							<dt><img src="../images/i-data-atm-locations.png" alt="ATM locations in Bangkok, Thailand"></dt>
+							<dd class="container_label">泰国曼谷自动柜员机所在位置</dd>
+						</dl>
+					</div>
+					<div class="column_one_third_last">
+						<p><span class="hilight">竞争对手的位置</span>－在大多数情况下，我们可能映射到你大部分的竞争对手与您业务属性相关的点位。获得这一信息的原始数据、咨询输出或使用我们基于网络平台的软件工具，可以使您直观地看到您的位置与您竞争对手的位置有哪些关系。</p>
+						<p>您是否正在扩张您的零售业务，或瞄准目标客户进入更好的市场，您必须好好了解与您店铺网络有关的竞争对手在何处。</p>
+						<dl class="product_video_container_bottom">
+							<dt><img src="../images/i-data-shopping-centers.png" alt="Shopping centers in Shanghai, China"></dt>
+							<dd class="container_label">购物中心在中国上海的地点</dd>
+						</dl>
+					</div>
+				<div class="clear"></div>
+				<div class="grey_line_50"></div>
+				<h5><span class="hilight" id="brand_tracking">品牌跟踪</span>－追踪整个亚洲地区的不同类别的营业场所和属性。</h5>
+					<div class="column_two_third">
+						<p>我们除了追踪底图，基础设施和政府相关的点位数据以外，还包括各大品牌在这里看到的类别的所有相关数据。因此，举例来说，如果你需要知道所有在中国的麦当劳、肯德基、必胜客的位置，这个信息是一应俱全的。也许你需要知道所有耐克的店址，包括购物中心和商场内，该信息也可以从我们这里获取。</p>
+						<p><span class="hilight">品牌的协同优势</span>－通过分析您的商店位置和业绩数据性能关系到业务的 POI 数据，你可以发现您的品牌与网格的协同效应。</p>
+						<p><span class="hilight">服务区重叠（蚕食）</span>－通过对您的竞争对手位置的地理信息系统分析，可以更好地了解它们如何影响您的店铺业绩。</p>
+						<p class="bottom">想要了解更多我们在整个亚洲追踪的具体品牌，<a href="mailto:curious@getchee.com?Subject=Contact%20our%20team">请联系我们的团队</a></p>
+					</div>
+					<div class="column_one_third_last">
+						<table border="1">
+							<tr><th class="ee">兴趣点分类</th><th>品牌</th></tr>
+							<tr><td class="ee">服装鞋帽</td><td>30</td></tr>
+							<tr><td class="ee">咖啡店</td><td>7</td></tr>
+							<tr><td class="ee">甜甜圈</td><td>4</td></tr>
+							<tr><td class="ee">电子零售商</td><td>7</td></tr>
+							<tr><td class="ee">家具</td><td>5</td></tr>
+							<tr><td class="ee">宾馆</td><td>227</td></tr>
+							<tr><td class="ee">奢侈品</td><td>41</td></tr>
+							<tr><td class="ee">个人护理</td><td>7</td></tr>
+							<tr><td class="ee">连锁餐饮店&餐饮店</td><td>10</td></tr>
+							<tr><td class="ee">购物中心</td><td>2142</td></tr>
+							<tr><td class="ee">超市</td><td>34</td></tr>
+						</table>
+						<div class="center container_label">中国 POI 品牌跟踪类别</div>
+					</div>
+			</div>
+		<div class="clear"></div>
+		</section>
+		<div class="data_overview_second_cross">
+			<div class="cross_float">
+				<div class="center_wrap">
+					<div class="cross_box_center">探索代表您业务主要零售驱动力的市场因素</div>
+				</div>
+			</div>
+				<div class="half_white"></div>
+				<div class="grey_line"></div>
+				<div class="half_grey"></div>
+		</div>
+		<section class="grey_section">
+			<div class="main_wrap">
+				<div class="column_half">
+					<h4 class="s" id="heat_maps">热图</h4>
+					<h5>这是一个在地图上查看数据的不同方式，可以直观地看到在与地理相关的信息。</h5>
+					<p>有许多不同种类的热图，但他们在了解其地理环境关系的数据集的密度上都有着相同的原则。</p>
+					<p class="bottom">我们生产支持在亚洲的地域的标准化热图。这些都有助于快速了解新的市场，在人们生活、工作及商店。</p>
+				</div>
+				<div class="column_half_last">
+					<p><span class="hilight">交通便捷性</span>－我们用如地铁站、巴士站和火车站等交通基础设施的聚集点表示。</p>
+					<p><span class="hilight">商业</span>－我们使用一个商业点的数据，如银行、注册营业地址和办公楼聚集处。</p>
+					<p><span class="hilight">生活方式</span>－我们使用零售商，如咖啡厅、商场、餐厅、购物中心的聚集点表示。</p>
+					<p class="bottom"><span class="hilight">住宅</span>－我们用一个共同点，如超市、便利店和录像带出租地点聚集点表示。</p>
+				</div>
+			<div class="clear"></div>
+			<div class="grey_line_50"></div>
+				<div class="column_one_third">
+					<p><span class="hilight">竞争对手的强度</span>－使用热图可以直观地看到并了解你竞争对手的跨地域分布。你并不需要对输出进行复杂的分析。</p>
+					<dl class="product_video_container_bottom">
+						<dt><img src="../images/i-data-competitor-heat-map.png" alt="Competitor heat map in Mumbai, India"></dt>
+						<dd class="container_label">竞争对手在印度孟买的热图</dd>
+					</dl>
+				</div>
+				<div class="column_one_third">
+					<p><span class="hilight">产业强度</span>－不同行业类型的业务位置如何跨地域分布。与您的业务有何联系？你是否在正确的具有潜力的位置？</p>
+					<dl class="product_video_container_bottom">
+						<dt><img src="../images/i-data-qsr-intensity.png" alt="QSR intensity in Shanghai, China"></dt>
+						<dd class="container_label">中国上海连锁快餐店的强度</dd>
+					</dl>
+				</div>
+				<div class="column_one_third_last">
+					<p><span class="hilight">市场潜力</span>－我们可根据你的目标消费者、主要竞争对手、协同的 POI 和其他市场的相关因素自定义市场为您的企业的潜在热图。</p>
+					<dl class="product_video_container_bottom">
+						<dt><img src="../images/i-data-market-potential.png" alt="Market potential in Seoul, Korea"></dt>
+						<dd class="container_label">韩国汉城的市场潜力</dd>
+					</dl>
+				</div>
+			</div>
+		<div class="clear"></div>
+		</section>
+		<!--    FOOTER    -->
+		<div class="footer_top"></div>
+		<footer id="footer">
+			<div id="content">
+			<div class="wrapper">
+				<div class="footer-left">
+					<div class="footer-left-top">
+						<h2>&#8220;<q>只要你有时间，天涯近在咫尺</q>&#8221;</h2>
+						<h2 class="gray"><i>- Steven Wright</i></h2>
+						<p>遗憾的是，在亚洲经营的品牌所有者很少有时间能从容的进行扩展；更高明的规划并运行新兴市场，现在正是时候。</p>
+					</div>
+					<div class="footer-left-middle">
+						<h2>我们的博客</h2>
+					</div>
+					<div id="footer-left-bottom-left">
+						<dl>
+							<dd>浏览<a href="http://blog.getchee.com/" target="_blank">我们的博客</a>，与亚洲新兴市场零售产业信息与趋势时刻保持同步。</dd>
+						</dl>
+					</div>
+					<div id="footer-left-bottom-right">
+						<nav>
+							<ul class="social_network">
+								<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="../images/nav-social-network-linkedin.png" class="ro" alt="LinkedIn"></a></li>
+								<li><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="../images/nav-social-network-youku.png" class="ro" alt="优酷"></a></li>
+								<li><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="../images/nav-social-network-weibo.png" class="ro" alt="新浪微博"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-right-top">
+						<h1>我们提供市场洞察力、工具和服务，帮助品牌在亚洲蓬勃发展。<a href="../about/our-company.html" title="Learn More">了解更多</a></h1>
+					</div>
+					<h2 id="curious">有疑问？请与我们联系。</h2><div id="thank" style="display:none"><span class="text_white">感谢您！</span>我们将尽快与您联系。</div>
+					<form action="../../s2form/process.php" method="post" accept-charset="utf-8" id="contact-form" name="form" onSubmit="return checkFields()" autocomplete="off">
+						<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="姓名">
+						<input name="email" id="email" class="validate[required,custom[email]] youremail star" type="text" placeholder="邮件地址">
+						<textarea name="message" id="message" class="validate[required] textarea star" type="text" placeholder="问题"></textarea>
+						<!-- Begin Catpcha -->
+						<div id="qna">
+						<label for="captcha" id="captcha_question"></label>
+						<input type="text" name="" value="" id="captcha">
+						<p id="captcha_error">Captcha test failed. Please try again.</p>
+						<script src="../../s2form/captcha.js" ></script>
+						</div>
+						<!-- End Captcha -->
+						<div style="display:hidden;" class="gallery clearfix"></div>
+						<input type="hidden" name="tags" value="Leads from Website - Curious. Data overview. Chinese.">
+						<div class="left_f" style="width:350px;">
+							<input type="checkbox" class="styled" name="newsletter subscription" value="Yes" checked="checked"/>
+							<span class="checkbox_label gallery clearfix">注册我们的新闻通讯。 
+							<ul class="newsletter_link">
+								<li class="preview"><a href="../images/newsletter-preview.png" rel="prettyPhoto" title="">预览</a></li>
+								<li class="archive"><a href="http://us6.campaign-archive2.com/home/?u=dee2b153b95bd76c8bbc6a009&id=9b3db0ba54" target="_blank">存档</a></li>
+							</ul>
+						</div>
+						<div class="right_f">
+							<input type="submit" class="button dark" name="subbut" value="发送" id="btnSignUp" />
+						</div>
+					</form>
+					<!--[if IE]>
+					  <script>
+					   // To test the @id toggling on password inputs in browsers that don¡¦t support changing an input¡¦s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+					   // jQuery.fn.hide = function() { return this; }
+					   // Then uncomment the last rule in the <style> element (in the <head>).
+					   $(function() {
+						// Invoke the plugin
+						$('input, textarea').placeholder();
+						// That¡¦s it, really.
+						// Now display a message if the browser supports placeholder natively
+						var html;
+						if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won¡¦t run in this case, since it¡¦s not needed. If you want to test the plugin, use an older browser ;)';
+						} else if ($.fn.placeholder.input) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+						}
+						if (html) {
+						 $('<p class="note">' + html + '</p>').insertAfter('form');
+						}
+					   });
+					  </script>
+					<![endif]-->
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav_area">
+			<div class="wrapper">
+				<nav>
+					<ul class="footer_nav">
+						<li><a href="../privacy-policy.html" target="_top" title="Privacy Policy">隐私条款</a></li>
+						<li><a href="../terms-of-use.html" target="_top" title="Terms of Use">使用条款</a></li>
+						<li id="last" title="English"><a href=javascript:lang_change("us");>English</a></li>
+					</ul>
+				</nav>
+				<small>&copy; <script>document.write((new Date()).getFullYear());</script> 磐讯版权所有</small>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); 
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff006ceda7e9720c677698e08dab44f47' type='text/javascript'%3E%3C/script%3E")); 
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+		</script>
+		</footer>
+	</body>
+</html>

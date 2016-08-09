@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>getchee – Terms of use</title>
+		<meta name="description" content="These are our company terms.">
+		<meta name="keywords" content="privacy policy, third-party services, disclaimers, warranties, liability, terms of use">
+		<link rel="stylesheet" href="css/n-public.css" />
+		<link rel="stylesheet" href="css/n-header.css" />
+		<link rel="stylesheet" href="css/n-footer.css" />
+		<link rel="stylesheet" href="css/n-form.css" />
+		<link rel="stylesheet" href="css/n-prettyPhoto.css" />
+		<link rel="stylesheet" href="css/new_style.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="../js/jquery-1.6.1.min.js" ></script>
+		<script src="../js/global-scripts.js" ></script>
+		<script src="../js/jquery.dropdown.js" ></script>
+		<script src="../js/custom-form-elements.js" ></script>
+		<script src="../js/jquery.prettyPhoto.js" ></script>
+		<script src="../js/jquery.placeholder.js" ></script>
+		<script src="../js/jquery.anchor.js" ></script>
+		<script src="../js/float.js" ></script>
+		<script src="../js/jquery.validationEngine-zh_CN.js" ></script>
+		<script src="../js/jquery.validationEngine.js" ></script>
+		<script src="../js/jquery.cycle.lite.min.js" ></script>
+		<script src="../js/html5gallery.js"></script>
+		<script src="../js/slideshow2.js"></script>
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#contact-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+			});
+		</script>
+
+		<script>
+			$(document).ready(function() {
+				$('.language_switch').click(function(){
+			    	$('.language').toggle('fast');
+				});
+			});
+		</script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btnSignUp").click(function(){
+				setTimeout(function(){
+					$("#curious").hide();
+					$("#thank").fadeIn(1500);
+					$('#contact-form').find(':input').each(function(){
+						var type = this.type, tag = this.tagName.toLowerCase();
+						if (type == 'text' || type == 'password' || tag == 'textarea')
+							this.value = '';
+						<!--else if (type == 'checkbox' || type == 'radio')-->
+						<!--this.checked = false;-->
+						<!--else if (tag == 'select')-->
+						<!--this.selectedIndex = -1;
+					})
+				}, 6000);
+				setTimeout(function(){
+					$("#thank").hide();
+					$("#curious").fadeIn(1500);
+					$("#btnSignUp").attr("disabled", false);
+				}, 12000);
+			});
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#contact-form").get(0).reset();
+			$("#contact-form")[0].reset();
+		});
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body class="black">
+	<div id="big">
+		<div id="abgne_float_ad" >
+			<a href="#footer_nav_area" class="anchorLink"><img src="images/curious.png" width="120" height="69" alt="Link to contact form" style="height:69; width:120; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/curious.png', sizingMethod='scale');"></a>
+		</div>
+	</div>
+		<!--    HEADER    -->
+		<header id="main-head-new">
+			<!--    LOGO    -->
+			<div class="header_nav">
+				<div class="main_wrap">
+					<div class="header-left">
+						<ul>
+							<li class="border"><a href="http://blog.getchee.com/" target="_blank" title="Our Blog">我们的博客</a></li>
+							<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="images/header-social-linkedin.png" class="ro" alt="LinkedIn"/></a></li>
+							<li class="narrow"><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="images/header-social-youku.png" class="ro" alt="优酷"/></a></li>
+							<li class="narrow border"><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="images/header-social-sinaweibo.png" class="ro" alt="新浪微博"/></a></li>
+							
+							<li class="border"><a href="mailto:marketing@getchee.com" target="_blank" title="marketing@getchee.com"><img src="images/header-mail.png" alt="Email"/></a></li>
+							<li><img src="images/header-phone.png" alt="Phone"/></li>
+							<li class="narrow">+886 2 7722 3600</li>
+						</ul>
+					</div>
+					<div class="header-right">
+						<ul>
+							<li>电子报订阅</li>
+							<li class="narrow2">
+								<form action="http://getchee.us6.list-manage1.com/subscribe/post" method="POST">
+									<input type="hidden" name="u" value="dee2b153b95bd76c8bbc6a009">
+									<input type="hidden" name="id" value="811abd86dd">
+
+									<div id="mergeTable" class="mergeTable" style="float:left;">
+										<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+											<div class="field-group">
+												<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" class="header_email" value="" placeholder="邮件地址">
+											</div>
+										</div>
+									</div>
+
+									<div id="interestTable">
+										<div id="mergeRow-100-9529" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Product interest shown</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_1"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[9529][1]" value="1" class="av-checkbox">Data interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_2"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_2" name="group[9529][2]" value="1" class="av-checkbox">Market Entry Interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_4"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_4" name="group[9529][4]" value="1" class="av-checkbox">Network Optimization Interest</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9537" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>No Product interest</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_8"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_8" name="group[9537][8]" value="1" class="av-checkbox">No Product Interest shown</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9649" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Qualified leads</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_16"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_16" name="group[9649][16]" value="1" class="av-checkbox">Qualified lead</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_32"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_32" name="group[9649][32]" value="1" class="av-checkbox">Pending deal</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_64"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_64" name="group[9649][64]" value="1" class="av-checkbox">Purchased services</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+									</div>
+
+								<!-- real people should not fill this in and expect good things -->
+									<div style="position: absolute; left: -5000px;">
+										<input type="text" name="b_dee2b153b95bd76c8bbc6a009_811abd86dd" value="">
+									</div>
+									<input type="submit" value="Send" class="header_submit" alt="Subscribe Button"/>
+								</form>
+							</li>
+							<li class="narrow3">
+								<ul class="language_switch">
+									<li><a href="#">中文</a>
+										<ul>
+											<li class="language"><a href=javascript:lang_change("us");>English</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="main_nav">
+				<nav class="main_wrap">
+					<div class="logo_new"><a href="index.html" target="_top"><img src="images/logo.png" alt="getchee"/></a></div>
+					<ul class="main_menu">
+						<li><a href="about/our-company.html">关于我们</a>
+							<ul>
+								<li><a href="about/our-company.html">我们的公司</a></li>
+								<li><a href="about/our-clients.html">我们的客户</a></li>
+							</ul>
+						</li>
+						<li><a href="industry/food-n-beverage.html">行业</a>
+							<ul>
+								<li><a href="industry/food-n-beverage.html">餐饮</a></li>
+								<li><a href="industry/merchandise-n-apparel.html">商品与服装</a></li>
+								<li><a href="industry/banking-n-finance.html">银行与金融</a></li>
+							</ul>
+						</li>
+						<li><a href="data/data-overview.html">数据</a>
+							<ul>
+								<li><a href="data/data-overview.html">数据简介</a></li>
+								<li><a href="data/china-insight.html">中国透视</a></li>
+							</ul>
+						</li>
+						<li><a href="products/kiwi-overview.html">平台</a>
+							<ul>
+								<li><a href="products/kiwi-overview.html">Kiwi 简介</a></li>
+								<li><a href="http://www.getchee.com/kiwi/kiwi-support.html">Kiwi 支持</a></li>
+							</ul>
+						</li>
+						<li><a href="services/services-overview.html">服务</a>
+							<ul>
+								<li><a href="services/services-overview.html">服务简介</a></li>
+								<li><a href="services/city-ranking-study.html">城市排名研究</a></li>
+								<li><a href="services/network-optimization-study.html">网络优化研究</a></li>
+								<li><a href="services/greenfield-market-study.html">未开发地区市场研究</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html">联系我们</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="clear"></div>
+		<!--    BODY ARTICLE    -->
+		<div class="title_section" style="background-image: url(images/background/webBack1.png);">
+			<div class="title_wrap_single">
+				<h1>These are the terms.</h1>
+			</div>
+		</div>
+		<div class="main_wrap">
+			<section class="white_section">
+				<ol class="main">
+					<li>Acceptance of terms of use and amendments.<br /><br />
+						<p>Each time you use or cause access to this Website, you agree to be bound by these terms of use, as amended from time to time with or without notice to you. In addition, if you are using a particular service on this Website or accessed via this Website, you will be subject to any rules or guidelines applicable to those services, and they will be incorporated by reference within these terms of use. Please read the site's privacy policy, which is incorporated within these terms of use by reference.</p>
+					</li>
+					<li>The site editor's service.<br /><br />
+						<p>This Website and the services provided to you on and via this Website are provided on an &#8220;<q>AS IS</q>&#8221; basis. You agree that the site editor reserves the right to modify or discontinue provision of this Website and its services, and to remove the data you provide, either temporarily or permanently, at any time, without notice and without any liability towards you. The site editor will not be held responsible or liable for timeliness, removal of information, failure to store information, inaccuracy of information, or improper delivery of information.</p>
+					</li>
+					<li>Your responsibilities and registration obligations.<br /><br />
+						<p>In order to use this Website or certain parts of it, you may be required to register for a user account on this Website; in this case, you agree to provide truthful information when requested, and -- if a minimum age is required for eligibility for a user account -- you undertake that you are at least the required age. By registering for a user account, you explicitly agree to this site's Terms of use, including any amendments made by the site editor that are published herein.</p>
+					</li>
+					<li>Privacy policy.<br /><br />
+						<p>Registration data and other personally identifiable information that the site may collect is subject to the terms of the site editor's Privacy policy.</p>
+					</li>
+					<li>Registration and password.<br /><br />
+						<p>You are responsible for maintaining the confidentiality of your password, and you will be responsible for all usage of your user account and/or user name, whether authorized or not authorized by you. You agree to immediately notify the site editor of any unauthorized use of your user account, user name or password.</p>
+					</li>
+					<li>Your conduct.<br /><br />
+						<p>You agree that all information or data of any kind, whether text, software, code, music or sound, photographs or graphics, video or other materials (&#8220;<q>content</q>&#8221;), made available publicly or privately, will be under the sole responsibility of the person providing the said content, or of the person whose user account is used. You agree that this Website may expose you to content that may be objectionable or offensive. The site editor will not be responsible to you in any way for content displayed on this Website, nor for any error or omission.</p>
+						<p>By using this Website or any service provided, you explicitly agree that:</p>
+							<ol class="lower-alpha">
+								<li>You will not provide any content or conduct yourself in any way that may be construed as: unlawful; illegal; threatening; harmful; abusive; harassing; stalking; defamatory; libelous; vulgar; obscene; offensive; objectionable; pornographic; designed to interfere with or disrupt the operation of this Website or any service provided; infected with a virus or other destructive or deleterious programming routine; giving rise to civil or criminal liability; or in violation of an applicable local, national or international law;</li>
+								<li>You will not impersonate or misrepresent your association with any person or entity; you will not forge or otherwise seek to conceal or misrepresent the origin of any content provided by you;</li>
+								<li>You will not collect or harvest any information about other users;</li>
+								<li>You will not provide, and you will not use this Website to provide, any content or service in any commercial manner, or in any manner that would involve junk mail, spam, chain letters, pyramid schemes, or any other form of unauthorized advertising or commerce; you will not use this Website to promote or operate any service or content without the site editor's prior written consent;</li>
+								<li>You will not provide any content that may give rise to the site editor being held civilly or criminally liable, or that may be considered a violation of any local, national or international law, including -- but not limited to -- laws relating to copyrights, trademarks, patents, or trade secrets.</li>
+							</ol>
+					</li>
+					<li>Submission of content on this Website.<br /><br />
+						<p>By providing any content to this Website:</p>
+							<ol class="lower-alpha">
+								<li>You agree to grant the site editor a worldwide, royalty-free, perpetual, non-exclusive right and license (including any moral rights or other necessary rights.) to use, display, reproduce, modify, adapt, publish, distribute, perform, promote, archive, translate, and to create derivative works and compilations, in whole or in part. Such license will apply with respect to any form, media, and technology already known at the time of provision or developed subsequently;</li>
+								<li>You warrant and represent that you have all legal, moral, and other rights that may be necessary to grant the site editor the license specified in this section 7;</li>
+								<li>You acknowledge and agree that the site editor will have the right (but not obligation), at the site editor's entire discretion, to refuse to publish, or to remove, or to block access to any content you provide, at any time and for any reason, with or without notice.</li>
+							</ol>
+					</li>
+					<li>Third-party services.<br /><br />
+						<p>Goods and services of third parties may be advertised and/or may be made available on or through this Website. Representations made regarding products and services provided by third parties will be governed by the policies and representations made by these third parties. The site editor will not in any manner be liable for or responsible for any of your dealings or interaction with third parties.</p>
+					</li>
+					<li>Indemnification.<br /><br />
+						<p>You agree to indemnify and hold harmless the site editor and the site editor's representatives, subsidiaries, affiliates, related parties, officers, directors, employees, agents, independent contractors, advertisers, partners, and co-branders, from any claim or demand, including reasonable legal fees, that may be filed by any third party, arising out of your conduct or connection with this Website or service, your provision of content, your violation of these Terms of use, or any other violation by you of the rights of another person or party.</p>
+					</li>
+					<li>Disclaimer of warranties.<br /><br />
+						<p>You understand and agree that your use of this Website and of any services or content provided (the &#8220;<q>service</q>&#8221;) is at your own risk. Services and content are provided to you &#8220;<q>as is</q>&#8221;, and the site editor expressly disclaims all warranties of any kind, either implied or express, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. The site editor makes no warranty, either implied or express, that any part of the service will be uninterrupted, error-free, virus-free, timely, secure, accurate, reliable, or of any quality, nor is it warranted either implicitly or expressly that any content is safe in any manner for download. You understand and agree that neither the site editor nor any participant in the service provides professional advice of any kind and that any advice or any other information obtained via this Website may be used solely at your own risk, and that the site editor will not be held liable in any way. Some jurisdictions may not allow disclaimers of implied warranties, and certain statements in the above disclaimer may not apply to you as regards implied warranties; the other terms and conditions remain enforceable notwithstanding.</p>
+					</li>
+					<li>Limitation of liability.<br /><br />
+						<p>You expressly understand and agree that the site editor will not be liable for any direct, indirect, special, incidental, consequential or exemplary damages; this includes, but is not limited to, damages for loss of profits, goodwill, use, data or other intangible losses (even if the site editor has been advised of the possibility of such damages), resulting from (i) the use of services or the inability to use services, (ii) the cost of obtaining substitute goods and/or services resulting from any transaction entered into on through services, (iii) unauthorized access to or alteration of your data transmissions, (iv) statements by any third party or conduct of any third party using services, or (v) any other matter relating to services. In some jurisdictions, it is not permitted to limit liability and, therefore, such limitations may not apply to you.</p>
+					</li>
+					<li>Reservation of rights.<br /><br />
+						<p>The site editor reserves all of the site editor's rights, including but not limited to any and all copyrights, trademarks, patents, trade secrets, and any other proprietary right that the site editor may have in respect of this Website, its content, and goods and services that may be provided. The use of the site editor's rights and property requires the site editor's prior written consent. By making services available to you, the site editor is not providing you with any implied or express licenses or rights, and you will have no rights to make any commercial use of this Website or provided services without the site editor's prior written consent.</p>
+					</li>
+					<li>Notification of copyright infringement.<br /><br />
+						<p>If you believe that your property has been used in any way that could be considered a copyright infringement or a violation of your intellectual property rights, the site editor's copyright agent may be contacted via: E-mail to the site administrator [Other contact information, if published on the site:]</p>
+					</li>
+					<li>Applicable law.<br /><br />
+						<p>You agree that these terms of use and any dispute arising out of your use of this Website or products or services provided will be governed by and construed in accordance with local laws applicable at the site editor's domicile, notwithstanding any differences between the said applicable legislation and legislation in force at your location. By registering for a user account on this Website, or by using this Website and the services it provides, you accept that jurisdiction is granted to the courts having jurisdiction over the site editor's domicile, and that any disputes will be heard by the said courts.</p>
+					</li>
+					<li class="bottom">Miscellaneous information.<br /><br />
+						<ol class="lower-roman">
+							<li>In the event that any provision of these terms of use is deemed to conflict with legislation by a court with jurisdiction over the parties, the said provision will be interpreted to reflect the original intentions of the parties in accordance with applicable law, and the remainder of these Terms of use will remain valid and applicable;</li>
+							<li>The failure of either party to assert any right under these Terms of use will not be considered to be a waiver of that party's right, and the said right will remain in full force and effect;</li>
+							<li>You agree that any claim or cause in respect of this Website or its services must be filed within one (1) year after such claim or cause arose, or the said claim or cause will be forever barred, without regard to any contrary legislation;</li>
+							<li class="bottom">The site editor may assign the site editor's rights and obligations under these terms of use; in this event, the site editor will be relieved of any further obligation.</li>
+						</ol>
+					</li>
+				</ol>
+			</section>
+		</div>
+		<!--    FOOTER    -->
+		<div class="footer_top"></div>
+		<footer id="footer">
+			<div id="content">
+			<div class="wrapper">
+				<div class="footer-left">
+					<div class="footer-left-top">
+						<h2>&#8220;<q>只要你有时间，天涯近在咫尺</q>&#8221;</h2>
+						<h2 class="gray"><i>- Steven Wright</i></h2>
+						<p>遗憾的是，在亚洲经营的品牌所有者很少有时间能从容的进行扩展；更高明的规划并运行新兴市场，现在正是时候。</p>
+					</div>
+					<div class="footer-left-middle">
+						<h2>我们的博客</h2>
+					</div>
+					<div id="footer-left-bottom-left">
+						<dl>
+							<dd>浏览<a href="http://blog.getchee.com/" target="_blank">我们的博客</a>，与亚洲新兴市场零售产业信息与趋势时刻保持同步。</dd>
+						</dl>
+					</div>
+					<div id="footer-left-bottom-right">
+						<nav>
+							<ul class="social_network">
+								<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="images/nav-social-network-linkedin.png" class="ro" alt="LinkedIn"></a></li>
+								<li><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="images/nav-social-network-youku.png" class="ro" alt="优酷"></a></li>
+								<li><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="images/nav-social-network-weibo.png" class="ro" alt="新浪微博"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-right-top">
+						<h1>我们提供市场洞察力、工具和服务，帮助品牌在亚洲蓬勃发展。<a href="about/our-company.html" title="Learn More">了解更多</a></h1>
+					</div>
+					<h2 id="curious">有疑问？请与我们联系。</h2><div id="thank" style="display:none"><span class="text_white">感谢您！</span>我们将尽快与您联系。</div>
+					<form action="../s2form/process.php" method="post" accept-charset="utf-8" id="contact-form" name="form" onSubmit="return checkFields()" autocomplete="off">
+						<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="姓名">
+						<input name="email" id="email" class="validate[required,custom[email]] youremail star" type="text" placeholder="邮件地址">
+						<textarea name="message" id="message" class="validate[required] star" type="text" placeholder="问题"></textarea>
+						<!-- Begin Catpcha -->
+						<div id="qna">
+						<label for="captcha" id="captcha_question"></label>
+						<input type="text" name="" value="" id="captcha">
+						<p id="captcha_error">Captcha test failed. Please try again.</p>
+						<script src="../s2form/captcha.js" ></script>
+						</div>
+						<!-- End Captcha -->
+						<div style="display:hidden;" class="gallery clearfix"></div>
+						<input type="hidden" name="tags" value="Leads from Website - Curious. Terms of use. Chinese.">
+						<div class="left_f" style="width:350px;">
+							<input type="checkbox" class="styled" name="newsletter subscription" value="Yes" checked="checked"/>
+							<span class="checkbox_label gallery clearfix">注册我们的新闻通讯。 
+							<ul class="newsletter_link">
+								<li class="preview"><a href="images/newsletter-preview.png" rel="prettyPhoto" title="">预览</a></li>
+								<li class="archive"><a href="http://us6.campaign-archive2.com/home/?u=dee2b153b95bd76c8bbc6a009&id=9b3db0ba54" target="_blank">存档</a></li>
+							</ul>
+						</div>
+						<div class="right_f">
+							<input type="submit" class="button dark" name="subbut" value="发送" id="btnSignUp" />
+						</div>
+					</form>
+					<!--[if IE]>
+					  <script>
+					   // To test the @id toggling on password inputs in browsers that don¡¦t support changing an input¡¦s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+					   // jQuery.fn.hide = function() { return this; }
+					   // Then uncomment the last rule in the <style> element (in the <head>).
+					   $(function() {
+						// Invoke the plugin
+						$('input, textarea').placeholder();
+						// That¡¦s it, really.
+						// Now display a message if the browser supports placeholder natively
+						var html;
+						if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won¡¦t run in this case, since it¡¦s not needed. If you want to test the plugin, use an older browser ;)';
+						} else if ($.fn.placeholder.input) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+						}
+						if (html) {
+						 $('<p class="note">' + html + '</p>').insertAfter('form');
+						}
+					   });
+					  </script>
+					<![endif]-->
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav_area">
+			<div class="wrapper">
+				<nav>
+					<ul class="footer_nav">
+						<li><a href="privacy-policy.html" target="_top" title="Privacy Policy">隐私条款</a></li>
+						<li id="last" ><a href="terms-of-use.html" target="_top" title="Terms of Use">使用条款</a></li>
+						<li id="last" title="中文版" style="display:none;"><a href=javascript:lang_change("us");>English</a></li>
+					</ul>
+				</nav>
+				<small>&copy; <script>document.write((new Date()).getFullYear());</script> 磐讯版权所有</small>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); 
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff006ceda7e9720c677698e08dab44f47' type='text/javascript'%3E%3C/script%3E")); 
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+		</script>
+		</footer>
+	</body>
+</html>

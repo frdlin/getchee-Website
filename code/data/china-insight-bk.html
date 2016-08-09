@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>getchee – GIS Tools & Data for Estimating Market Potential in China</title>
+		<meta name="description" content="Find target customers, prioritize geographies, and compare store performance against market data.">
+		<meta name="keywords" content="China, GIS tools and solutions, sales marketing and expansion planning, market data, distribution planning, retail brands, POS, demographics, points of interest, heat maps, target consumers, competitors, sales territory planning">
+		<link rel="stylesheet" href="../css/n-public.css" />
+		<link rel="stylesheet" href="../css/n-header.css" />
+		<link rel="stylesheet" href="../css/n-footer.css" />
+		<link rel="stylesheet" href="../css/n-form.css" />
+		<link rel="stylesheet" href="../css/n-prettyPhoto.css" />
+		<link rel="stylesheet" href="../css/new_style.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="../js/jquery-1.6.1.min.js" ></script>
+		<script src="../js/global-scripts.js" ></script>
+		<script src="../js/jquery.dropdown.js" ></script>
+		<script src="../js/custom-form-elements.js" ></script>
+		<script src="../js/jquery.prettyPhoto.js" ></script>
+		<script src="../js/jquery.anchor.js" ></script>
+		<script src="../js/float.js" ></script>
+		<script src="../js/jquery.validationEngine-en.js" ></script>
+		<script src="../js/jquery.validationEngine.js" ></script>
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#configure-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+				jQuery("#contact-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				$('.language_switch').click(function(){
+			    	$('.language').toggle('fast');
+				});
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#contact-form").get(0).reset();
+			$("#contact-form")[0].reset();
+			$("#configure-form").get(0).reset();
+			$("#configure-form")[0].reset();
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#configure01_01,#configure02_01,#configure03_01,#configure01_02,#configure02_02,#configure03_02").click(function(){
+				$("html").css({"overflow":"hidden"}, 100);
+				$("#abgne_float_ad").hide();
+				$(".configure_bg").fadeIn(100);
+			});
+			
+			$(".configure_close,#configure_cancel_01,#configure_cancel_02,#configure_cancel_03").click(function(){
+				location.reload();
+			});
+			
+			$("#configure_next_01").click(function(){
+				$("#configure_form_01").hide();
+				$("#configure_form_02").show();
+			});
+			
+			$("#configure_back_02").click(function(){
+				$("#configure_form_02").hide();
+				$("#configure_form_01").show();
+			});
+			
+			$("#configure_next_02").click(function(){
+				$("#configure_form_02").hide();
+				$("#configure_form_03").show();
+			});
+			
+			$("#configure_back_03").click(function(){
+				$("#configure_form_03").hide();
+				$("#configure_form_02").show();
+			});
+		});
+		</script>
+		<script>
+		$(function() {  
+		  $(".low input[type='button']").click(function(){  
+			var arr = $(this).attr("name").split("2");  
+			var from = arr[0];  
+			var to = arr[1];  
+			$("#" + from + " option:selected").each(function(){  
+			  $("#" + to).append($(this).clone());  
+			  $(this).remove();  
+			});  
+		  });  
+		})
+		</script>
+		<script>
+		$(document).ready(function() {
+			$form = $('#configure-form'); // cache
+			$form.find('#configure_next_01').prop('disabled', true); // disable submit btn
+			$form.find('.rq').change(function() { // monitor all inputs for changes
+				var disable = false;
+				$form.find('.rq').each(function(i,el) { // test all inputs for values
+					if ($.trim(el.value) === "") {
+						disable = true; // disable submit if any of them are still blank
+					}
+				});
+				$form.find('#configure_next_01').prop('disabled',disable);
+			});
+		});
+		</script>
+		<script>
+		$().ready(function () {
+			$("input[name^='left2right']").click(function () {
+				var id = $(this).attr('id').split('_');
+				if (id[1] == 'all') {
+					$('#select1 option').remove().appendTo('#select2');
+				} else {
+					$('#select1 option:selected').remove().appendTo('#select2');
+				}
+				var selected_cities = $('#select2 option').map(function () { return $(this).val(); }).get().join(' & ');
+				$("#selected_cities").attr('value', selected_cities);
+				return false;
+			});
+			$("input[name^='right2left']").click(function () {
+				var id = $(this).attr('id').split('_');
+				if (id[1] == 'all') {
+					$('#select2 option').remove().appendTo('#select1');
+				} else {
+					$('#select2 option:selected').remove().appendTo('#select1');
+				}
+				var selected_cities = $('#select2 option').map(function () { return $(this).val(); }).get().join(' & ');
+				$("#selected_cities").attr('value', selected_cities);
+				return false;
+			});
+		});  
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+	<div id="preloaded_images">
+		<img src="../images/thank-bullet-large.png" width="1" height="1" alt="Preload Image" />
+	</div>
+	<div id="big">
+		<div id="abgne_float_ad" >
+			<a href="#footer_nav_area" class="anchorLink"><img src="../images/curious.png" width="120" height="69" alt="Link to contact form" style="height:69; width:120; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/curious.png', sizingMethod='scale');"></a>
+		</div>
+	</div>
+		<form action="../s2form/process.php" method="post" accept-charset="utf-8" id="configure-form" name="form" onSubmit="return checkFields()">
+			<div class="configure_bg">
+				<div class="configure_close"></div>
+				<div class="configure_main">
+					<div id="configure_form_01">
+						<div class="configure_title">Tell us a little bit about you.</div>
+						<div class="configure_steps">Step 1 of 3</div>
+						<div class="configure_subtitle">Personal Information</div>
+						<div class="form_block">
+							<input name="first_name" class="validate[required] left rq" type="text" placeholder="First Name (required)">
+							<input name="last_name" class="validate[required] right rq" type="text" placeholder="Last Name (required)">
+							<input name="email1" id="email1" class="validate[required,custom[email]] left rq" type="text" placeholder="Email (required)">
+							<input name="phone" class="right qq" type="text" placeholder="Phone">
+							<!-- Begin Catpcha -->
+							<div id="qna">
+							<label for="captcha" id="captcha_question"></label>
+							<input type="text" name="" value="" id="captcha">
+							<p id="captcha_error">Captcha test failed. Please try again.</p>
+							<script src="../s2form/captcha.js" ></script>
+							</div>
+							<!-- End Captcha -->
+						</div>
+						<div class="clear"></div>
+						<div class="form_block">
+							<div class="grey_line"></div>
+						</div>
+						<div class="configure_subtitle">Company Information</div>
+						<div class="form_block">
+							<input name="company_name" class="validate[required] left rq" type="text" placeholder="Company Name (required)">
+							<div class="styled_select">
+								<select name="industry">
+									<option value="">Industry</option>
+									<option value="Automotive">Automotive</option>
+									<option value="Banking">Banking</option>
+									<option value="FMCG">FMCG</option>
+									<option value="Retail (Apparel)">Retail (Apparel)</option>
+									<option value="Retail (CVS)">Retail (CVS)</option>
+									<option value="Retail (CDR)">Retail (CDR)</option>
+									<option value="Retail (Supermarket)">Retail (Supermarket)</option>
+									<option value="Retail (Hypermarket)">Retail (Hypermarket)</option>
+									<option value="Retail Food (QSR)">Retail Food (QSR)</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<input name="job_title" class="left" type="text" placeholder="Job Title">
+							<input name="company_website" class="right" type="text" placeholder="Company Website">
+						</div>
+						<div class="form_block_right">
+							<input type="reset" class="button grey2" value="Cancel" id="configure_cancel_01"/>
+							<input type="button" class="button green" value="Next" id="configure_next_01"/>
+						</div>
+					</div>
+					<div id="configure_form_02">
+						<div class="configure_title">Tell us what cities you are interested in.</div>
+						<div class="configure_steps">Step 2 of 3</div>
+						<div class="form_block">
+							<div class="configure_half">
+								<div class="configure_subtitle">Add City</div>
+								<select name="cities_list" id="select1" size="8" multiple="multiple" class="configure_half_form">
+									<option value="Baoding, Hebei Sheng">Baoding, Hebei Sheng</option>
+									<option value="Beijing, Beijing Shi">Beijing, Beijing Shi</option>
+									<option value="Changchun, Jilin Sheng">Changchun, Jilin Sheng</option>
+									<option value="Changsha, Hunan Sheng">Changsha, Hunan Sheng</option>
+									<option value="Changzhou, Jiangsu Sheng">Changzhou, Jiangsu Sheng</option>
+									<option value="Chengdu, Sichuan Sheng">Chengdu, Sichuan Sheng</option>
+									<option value="Chongqing, Chongqing Shi">Chongqing, Chongqing Shi</option>
+									<option value="Dalian, Liaoning Sheng">Dalian, Liaoning Sheng</option>
+									<option value="Dongguan, Guangdong Sheng">Dongguan, Guangdong Sheng</option>
+									<option value="Foshan, Guangdong Sheng">Foshan, Guangdong Sheng</option>
+									<option value="Fuzhou, Fujian Sheng">Fuzhou, Fujian Sheng</option>
+									<option value="Guangzhou, Guangdong Sheng">Guangzhou, Guangdong Sheng</option>
+									<option value="Guiyang, Guizhou Sheng">Guiyang, Guizhou Sheng</option>
+									<option value="Haikou, Hainan Sheng">Haikou, Hainan Sheng</option>
+									<option value="Hangzhou, Zhejiang Sheng">Hangzhou, Zhejiang Sheng</option>
+									<option value="Harbin, Heilongjiang Sheng">Harbin, Heilongjiang Sheng</option>
+									<option value="Hefei, Anhui Sheng">Hefei, Anhui Sheng</option>
+									<option value="Huai'An, Jiangsu Sheng">Huai'An, Jiangsu Sheng</option>
+									<option value="Huizhou, Guangdong Sheng">Huizhou, Guangdong Sheng</option>
+									<option value="Jiangmen, Guangdong Sheng">Jiangmen, Guangdong Sheng</option>
+									<option value="Jiaxing, Zhejiang Sheng">Jiaxing, Zhejiang Sheng</option>
+									<option value="Jilin, Jilin Sheng">Jilin, Jilin Sheng</option>
+									<option value="Jinan, Shandong Sheng">Jinan, Shandong Sheng</option>
+									<option value="Jingzhou, Hubei Sheng">Jingzhou, Hubei Sheng</option>
+									<option value="Jinhua, Zhejiang Sheng">Jinhua, Zhejiang Sheng</option>
+									<option value="Jining, Shandong Sheng">Jining, Shandong Sheng</option>
+									<option value="Kunming, Yunnan Sheng">Kunming, Yunnan Sheng</option>
+									<option value="Lanzhou, Gansu Sheng">Lanzhou, Gansu Sheng</option>
+									<option value="Linyi, Shandong Sheng">Linyi, Shandong Sheng</option>
+									<option value="Luoyang, Henan Sheng">Luoyang, Henan Sheng</option>
+									<option value="Maoming, Guangdong Sheng">Maoming, Guangdong Sheng</option>
+									<option value="Nanchang, Jiangxi Sheng">Nanchang, Jiangxi Sheng</option>
+									<option value="Nanjing, Jiangsu Sheng">Nanjing, Jiangsu Sheng</option>
+									<option value="Nanning, Guangxi Zhuangzu Zizhiqu">Nanning, Guangxi Zhuangzu Zizhiqu</option>
+									<option value="Nantong, Jiangsu Sheng">Nantong, Jiangsu Sheng</option>
+									<option value="Nanyang, Henan Sheng">Nanyang, Henan Sheng</option>
+									<option value="Ningbo, Zhejiang Sheng">Ningbo, Zhejiang Sheng</option>
+									<option value="Putian, Fujian Sheng">Putian, Fujian Sheng</option>
+									<option value="Qingdao, Shandong Sheng">Qingdao, Shandong Sheng</option>
+									<option value="Quanzhou, Fujian Sheng">Quanzhou, Fujian Sheng</option>
+									<option value="Shanghai, Shanghai Shi">Shanghai, Shanghai Shi</option>
+									<option value="Shantou, Guangdong Sheng">Shantou, Guangdong Sheng</option>
+									<option value="Shaoxing, Zhejiang Sheng">Shaoxing, Zhejiang Sheng</option>
+									<option value="Shenyang, Liaoning Sheng">Shenyang, Liaoning Sheng</option>
+									<option value="Shenzhen, Guangdong Sheng">Shenzhen, Guangdong Sheng</option>
+									<option value="Shijiazhuang, Hebei Sheng">Shijiazhuang, Hebei Sheng</option>
+									<option value="Suzhou, Jiangsu Sheng">Suzhou, Jiangsu Sheng</option>
+									<option value="Taiyuan, Shanxi Sheng">Taiyuan, Shanxi Sheng</option>
+									<option value="Taizhou, Jiangsu Sheng">Taizhou, Jiangsu Sheng</option>
+									<option value="Taizhou, Zhejiang Sheng">Taizhou, Zhejiang Sheng</option>
+									<option value="Tai'An, Shandong Sheng">Tai'An, Shandong Sheng</option>
+									<option value="Tangshan, Hebei Sheng">Tangshan, Hebei Sheng</option>
+									<option value="Tianjin, Tianjin Shi">Tianjin, Tianjin Shi</option>
+									<option value="Urumqi City, Xinjiang Uygur Zizhiqu">Urumqi City, Xinjiang Uygur Zizhiqu</option>
+									<option value="Weifang, Shandong Sheng">Weifang, Shandong Sheng</option>
+									<option value="Wenzhou, Zhejiang Sheng">Wenzhou, Zhejiang Sheng</option>
+									<option value="Wuhan, Hubei Sheng">Wuhan, Hubei Sheng</option>
+									<option value="Wuxi, Jiangsu Sheng">Wuxi, Jiangsu Sheng</option>
+									<option value="Xiamen, Fujian Sheng">Xiamen, Fujian Sheng</option>
+									<option value="Xinxiang, Henan Sheng">Xinxiang, Henan Sheng</option>
+									<option value="Xi'An, Shanxi Sheng">Xi'An, Shanxi Sheng</option>
+									<option value="Xuzhou, Jiangsu Sheng">Xuzhou, Jiangsu Sheng</option>
+									<option value="Yancheng, Jiangsu Sheng">Yancheng, Jiangsu Sheng</option>
+									<option value="Yangzhou, Jiangsu Sheng">Yangzhou, Jiangsu Sheng</option>
+									<option value="Yantai, Shandong Sheng">Yantai, Shandong Sheng</option>
+									<option value="Zhanjiang, Guangdong Sheng">Zhanjiang, Guangdong Sheng</option>
+									<option value="Zhengzhou, Henan Sheng">Zhengzhou, Henan Sheng</option>
+									<option value="Zhenjiang, Jiangsu Sheng">Zhenjiang, Jiangsu Sheng</option>
+									<option value="Zhongshan, Guangdong Sheng">Zhongshan, Guangdong Sheng</option>
+									<option value="Zhuhai, Guangdong Sheng">Zhuhai, Guangdong Sheng</option>
+									<option value="Zibo, Shandong Sheng">Zibo, Shandong Sheng</option>
+								</select>
+							</div>
+							<div class="low configure_switch">
+								<input name="left2right" type="button" class="icon_add" value="Add" id="add">
+								<input name="right2left" type="button" class="icon_remove" value="Remove" id="remove">
+							</div>
+							<div class="configure_half">
+								<div class="configure_subtitle">Remove City</div>
+								<select id="select2" size="8" multiple="multiple" class="configure_half_form"></select>
+								<input type="hidden" value="" id="selected_cities" name="cities">
+							</div>
+						</div>
+						<div class="form_block_right">
+							<input type="reset" class="button grey2" value="Cancel" id="configure_cancel_02"/>
+							<input type="button" class="button grey2" value="Back" id="configure_back_02"/>
+							<input type="button" class="button green" value="Next" id="configure_next_02"/>
+						</div>
+					</div>
+					<div id="configure_form_03">
+						<div class="configure_title">Anything you’d like to ask us?</div>
+						<div class="configure_steps">Step 3 of 3</div>
+						<div class="form_block">
+							<textarea name="message" class="configure_textarea" type="text" placeholder="Questions/Comments..."></textarea>
+						</div>
+						<div class="form_block_right">
+							<input type="reset" class="button grey2" name="subbut" value="Cancel" id="configure_cancel_03"/>
+							<input type="button" class="button grey2" name="subbut" value="Back" id="configure_back_03"/>
+							<input type="submit" class="button green" name="subbut" value="Send" id="configure_next_03"/>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<input type="hidden" name="tags" value="Leads from Website - China Insight Inquiries.">
+		</form>
+		<!--    HEADER    -->
+		<header id="main-head-new">
+			<!--    LOGO    -->
+			<div class="header_nav">
+				<div class="main_wrap">
+					<div class="header-left">
+						<ul>
+							<li class="border"><a href="http://blog.getchee.com/" target="_blank" title="Our Blog">Our Blog</a></li>
+							<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="../images/header-social-linkedin.png" class="ro" alt="LinkedIn"/></a></li>
+							<li class="narrow"><a href="https://www.facebook.com/teamgetchee" target="_blank" title="Facebook"><img src="../images/header-social-facebook.png" class="ro" alt="Facebook"/></a></li>
+							<li class="narrow border"><a href="http://twitter.com/getchee" target="_blank" title="Twitter"><img src="../images/header-social-twitter.png" class="ro" alt="Twitter"/></a></li>
+							<li class="border"><a href="mailto:marketing@getchee.com" target="_blank" title="marketing@getchee.com"><img src="../images/header-mail.png" alt="Email"/></a></li>
+							<li><img src="../images/header-phone.png" alt="Phone"/></li>
+							<li class="narrow">+886 2 7722 3600</li>
+						</ul>
+					</div>
+					<div class="header-right">
+						<ul>
+							<li>Newsletter Subscription</li>
+							<li class="narrow2">
+								<form action="http://getchee.us6.list-manage1.com/subscribe/post" method="POST">
+									<input type="hidden" name="u" value="dee2b153b95bd76c8bbc6a009">
+									<input type="hidden" name="id" value="811abd86dd">
+
+									<div id="mergeTable" class="mergeTable" style="float:left;">
+										<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+											<div class="field-group">
+												<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" class="header_email" value="" placeholder="Email">
+											</div>
+										</div>
+									</div>
+
+									<div id="interestTable">
+										<div id="mergeRow-100-9529" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Product interest shown</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_1"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[9529][1]" value="1" class="av-checkbox">Data interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_2"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_2" name="group[9529][2]" value="1" class="av-checkbox">Market Entry Interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_4"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_4" name="group[9529][4]" value="1" class="av-checkbox">Network Optimization Interest</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9537" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>No Product interest</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_8"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_8" name="group[9537][8]" value="1" class="av-checkbox">No Product Interest shown</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9649" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Qualified leads</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_16"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_16" name="group[9649][16]" value="1" class="av-checkbox">Qualified lead</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_32"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_32" name="group[9649][32]" value="1" class="av-checkbox">Pending deal</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_64"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_64" name="group[9649][64]" value="1" class="av-checkbox">Purchased services</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+									</div>
+
+								<!-- real people should not fill this in and expect good things -->
+									<div style="position: absolute; left: -5000px;">
+										<input type="text" name="b_dee2b153b95bd76c8bbc6a009_811abd86dd" value="">
+									</div>
+									<input type="submit" value="Send" class="header_submit" alt="Subscribe Button"/>
+								</form>
+							</li>
+							<li class="narrow3">
+								<ul class="language_switch">
+									<li><a href="#">English</a>
+										<ul>
+											<li class="language"><a href=javascript:lang_change("cn");>中文版</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="main_nav">
+				<nav class="main_wrap">
+					<div class="logo_new"><a href="../index.html" target="_top"><img src="../images/logo.png" alt="getchee, be market intelligent"/></a></div>
+					<ul class="main_menu">
+						<li><a href="../about/our-company.html">About</a>
+							<ul>
+								<li><a href="../about/our-company.html">Our Company</a></li>
+								<li><a href="../about/our-clients.html">Our Clients</a></li>
+								<li><a href="../about/jobs.html">Jobs</a></li>
+							</ul>
+						</li>
+						<li><a href="../industry/food-n-beverage.html">Industry</a>
+							<ul>
+								<li><a href="../industry/food-n-beverage.html">Food & Beverage</a></li>
+								<li><a href="../industry/merchandise-n-apparel.html">Merchandise & Apperal</a></li>
+								<li><a href="../industry/banking-n-finance.html">Banking & Finance</a></li>
+							</ul>
+						</li>
+						<li><a href="data-overview.html">Data</a>
+							<ul>
+								<li><a href="data-overview.html">Data Overview</a></li>
+								<li><a href="china-insight.html">China Insight</a></li>
+							</ul>
+						</li>
+						<li><a href="../products/kiwi-overview.html">Platform</a>
+							<ul>
+								<li><a href="../products/kiwi-overview.html">Kiwi Overview</a></li>
+								<li><a href="http://www.getchee.com/kiwi/kiwi-support.html">Kiwi Support</a></li>
+							</ul>
+						</li>
+						<li><a href="../services/services-overview.html">Services</a>
+							<ul>
+								<li><a href="../services/services-overview.html">Services Overview</a></li>
+								<li><a href="../services/city-ranking-study.html">City Ranking Study</a></li>
+								<li><a href="../services/network-optimization-study.html">Network Optimization Study</a></li>
+								<li><a href="../services/greenfield-market-study.html">Greenfield Market Study</a></li>
+							</ul>
+						</li>
+						<li><a href="../contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="clear"></div>
+		<!--    BODY ARTICLE    -->
+		<div style="display:hidden;" class="gallery clearfix"></div>
+		<div class="title_section" style="background-image: url(../images/background/webBack1.png);">
+			<div class="title_wrap">
+				<h1>China Insight</h1>
+				<h2>We’ve created a standardized dataset for more than 50 cities that will help your sales, marketing, and expansion planning.</h2>
+			</div>
+		</div>
+		<div class="main_wrap">
+			<section class="white_section">
+				<div class="column_half">
+					<h4 class="s">What can you accomplish with this data?</h4>
+					<h5>Find target customers, prioritize geographies, and compare store performance against market data.</h5>
+					<p>Whether you are a new market entrant, or have an existing network in China, this data will help validate your sales, marketing, and expansion decisions, and better manage the risk of operations.</p>
+					<p>Use it to estimate gross and net market potential (derived from target consumers, competitors, and synergy brands) for geographies and key trade zones. Use it to better understand and adjust your existing store network by comparing performance and operating expenses (POS and fixed/variable costs) to the market data.</p>
+				</div>
+				<div class="column_half_last">
+					<h4 class="s">How do you use this data product?</h4>
+					<h5>This data can be analyzed via GIS tools such as <a href="http://www.esri.com/software/arcgis/index.html" target="_blank">ESRI’s ArcGIS</a> or <a href="http://mapbox.com/tilemill/" target="_blank">Map Box’s Tile Mill</a>, <a href="http://en.wikipedia.org/wiki/Business_intelligence_tools" target="_blank">BI software</a>, or MS Excel.</h5>
+					<p>Sales, marketing, or business analysts can plug this data into standardized tools to support distribution planning, sales territory creation, and marketing research amongst other activities.</p>
+					<p><span class="hilight">Example</span> — Let’s say you’re a retail apparel brand, and you want to notify your customers about a year-end sale. By loading this data into an Excel spreadsheet, you can quickly discover areas with a large number of target consumers. Use this information to invest in leaflet distribution, location-based SMS, and other marketing activities.</p>
+				</div>
+			
+		    <table id="order_table" class="gallery clearfix">
+				<tr>
+					<th class="first">
+						<dl class="product_video_container_bottom">
+							<dt><img src="../images/i-data-fast-food.png" alt="China Insight"></dt>
+							<dd></dd>
+						</dl>
+					</th>
+					<th>
+						<div class="order_table_title">Basic</div>
+						<div class="order_table_desc">Nationwide demographic<br/>and GDRP data package.</div>
+						<div class="order_table_16"><span class="hilight">Configure and inquire.</span></div>
+						<div><input type="button" class="button_download grey" name="subbut" value="Configure" id="configure01_01" onclick="$('#contact-form').validationEngine('hide'); return false;"/></div>
+					</th>
+					<th>
+						<div class="order_table_title">Plus</div>
+						<div class="order_table_desc">Advanced demographics<br/>and heat maps.</div>
+						<div class="order_table_16"><span class="hilight">Configure and inquire.</span></div>
+						<div><input type="button" class="button_download grey" name="subbut" value="Configure" id="configure02_01" onclick="$('#contact-form').validationEngine('hide'); return false;"/></div>
+					</th>
+					<th>
+						<div class="order_table_title">Max</div>
+						<div class="order_table_desc">Advanced demographics,<br/>heat maps, and POI.</div>
+						<div class="order_table_16"><span class="hilight">Configure and inquire.</span></div>
+						<div><input type="button" class="button_download grey" name="subbut" value="Configure" id="configure03_01" onclick="$('#contact-form').validationEngine('hide'); return false;"/></div>
+					</th>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">Region (China)</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>City-centric</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Nation-centric</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">Demographics</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<p class="hilight">City Level</p>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Household Number</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Working Population</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Total Population</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>GRDP</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Education</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Income</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<p class="hilight">Grid Level (1KM<sup>2</sup>)</p>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Age/Gender</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Household Number</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Total Population</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Working Population</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>500M<sup>2</sup> Downtown Area</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">Points of Interest (POI)</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<div class="table_half">
+							<p>Apparel</p>
+							<p>Banks</p>
+							<p>Coffee & Tea</p>
+							<p>Hotel</p>
+							<p>Hypermarket</p>
+						</div>
+						<div class="table_half">
+							<p>Personal Care</p>
+							<p>QSR</p>
+							<p>Restaurant</p>
+							<p>Shopping Mall</p>
+							<p>Supermarket</p>
+						</div>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">Heat Maps</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Accessibility</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Business</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Lifestyle</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>Population</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<div class="order_table_desc s"><span class="hilight">File Format</span></div>
+					</td>
+					<td><div class="order_table_16 s">.kml / .xls / .shp</div></td>
+					<td><div class="order_table_16 s">.kml / .xls / .shp</div></td>
+					<td><div class="order_table_16 s">.kml / .xls / .shp</div></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<div class="order_table_desc s"><span class="hilight">Price (USD)</span></div>
+					</td>
+					<td><div class="order_table_16 s"><span class="hilight">Configure and inquire.</span></div></td>
+					<td><div class="order_table_16 s"><span class="hilight">Configure and inquire.</span></div></td>
+					<td><div class="order_table_16 s"><span class="hilight">Configure and inquire.</span></div></td>
+				</tr>
+				<tr>
+					<td class="first_bottom"></td>
+					<td class="bottom"><input type="button" class="button_download grey" name="subbut" value="Configure" id="configure01_02" onclick="$('#contact-form').validationEngine('hide'); return false;"/></td>
+					<td class="bottom"><input type="button" class="button_download grey" name="subbut" value="Configure" id="configure02_02" onclick="$('#contact-form').validationEngine('hide'); return false;"/></td>
+					<td class="bottom"><input type="button" class="button_download grey" name="subbut" value="Configure" id="configure03_02" onclick="$('#contact-form').validationEngine('hide'); return false;"/></td>
+				</tr>
+		    </table>
+			<div class="clear"></div>
+			</section>
+        </div>
+		<!--    FOOTER    -->
+		<div class="footer_top"></div>
+		<footer id="footer">
+			<div id="content">
+			<div class="wrapper">
+				<div class="footer-left">
+					<div class="footer-left-top">
+						<h2>&#8220;<q>Everywhere is walking distance if you have the time.</q>&#8221;</h2>
+						<h2 class="gray"><i>- Steven Wright</i></h2>
+						<p>Unfortunately, brand owners operating in Asia have little time for leisurely exploration. Now is the time for better, smarter planning and execution for emerging markets.</p>
+					</div>
+					<div class="footer-left-middle">
+						<h2>Our Blog</h2>
+					</div>
+					<div id="footer-left-bottom-left">
+						<dl>
+							<dd>Visit <a href="http://blog.getchee.com/" target="_blank">our blog</a> for current retail news and trends happening throughout emerging markets in Asia.</dd>
+						</dl>
+					</div>
+					<div id="footer-left-bottom-right">
+						<nav>
+							<ul class="social_network">
+								<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="../images/nav-social-network-linkedin.png" class="ro" alt="LinkedIn"></a></li>
+								<li><a href="https://www.facebook.com/teamgetchee" target="_blank" title="Facebook"><img src="../images/nav-social-network-facebook.png" class="ro" alt="Facebook"></a></li>
+								<li><a href="http://twitter.com/getchee" target="_blank" title="Twitter"><img src="../images/nav-social-network-twitter.png" class="ro" alt="Twitter"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-right-top">
+						<h1>We provide market insight, tools, and services to help brands thrive in Asia. <a href="../about/our-company.html" title="Learn More">Learn More</a>.</h1>
+					</div>
+					<h2 id="curious">Curious? Get in touch.</h2><div id="thank" style="display:none"><span class="text_white">Thank You!</span> We'll be in touch with you soon.</div>
+					<form action="../s2form/process.php" method="post" accept-charset="utf-8" id="contact-form" name="form" onSubmit="return checkFields()">
+						<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="Name">
+						<input name="email2" id="email2" class="validate[required,custom[email]] youremail star" type="text" placeholder="Email">
+						<textarea name="message" id="message" class="validate[required] textarea star" type="text" placeholder="Question"></textarea>
+						<!-- Begin Catpcha -->
+						<div id="qna">
+						<label for="captcha" id="captcha_question"></label>
+						<input type="text" name="" value="" id="captcha">
+						<p id="captcha_error">Captcha test failed. Please try again.</p>
+						<script src="../s2form/captcha.js" ></script>
+						</div>
+						<!-- End Captcha -->
+						<div style="display:hidden;" class="gallery clearfix"></div>
+						<input type="hidden" name="tags" value="Leads from Website - Curious. China insight.">
+						<div class="left_f" style="width:350px;">
+							<input type="checkbox" class="styled" name="newsletter subscription" value="Yes" checked="checked"/>
+							<span class="checkbox_label gallery clearfix">Signup for our newsletter. 
+							<ul class="newsletter_link">
+								<li class="preview"><a href="../images/newsletter-preview.png" rel="prettyPhoto" title="">Preview</a></li>
+								<li class="archive"><a href="http://us6.campaign-archive2.com/home/?u=dee2b153b95bd76c8bbc6a009&id=9b3db0ba54" target="_blank">Archive</a></li>
+							</ul>
+						</div>
+						<div class="right_f">
+							<input type="submit" class="button dark" name="subbut" value="Send" id="btnSignUp"/>
+						</div>
+					</form>
+					<!--[if IE]>
+					  <script>
+					   // To test the @id toggling on password inputs in browsers that don¡¦t support changing an input¡¦s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+					   // jQuery.fn.hide = function() { return this; }
+					   // Then uncomment the last rule in the <style> element (in the <head>).
+					   $(function() {
+						// Invoke the plugin
+						$('input, textarea').placeholder();
+						// That¡¦s it, really.
+						// Now display a message if the browser supports placeholder natively
+						var html;
+						if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won¡¦t run in this case, since it¡¦s not needed. If you want to test the plugin, use an older browser ;)';
+						} else if ($.fn.placeholder.input) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+						}
+						if (html) {
+						 $('<p class="note">' + html + '</p>').insertAfter('form');
+						}
+					   });
+					  </script>
+					<![endif]-->
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav_area">
+			<div class="wrapper">
+				<nav>
+					<ul class="footer_nav">
+						<li><a href="../privacy-policy.html" target="_top" title="Privacy Policy">Privacy Policy</a></li>
+						<li><a href="../terms-of-use.html" target="_top" title="Terms of Use">Terms of Use</a></li>
+						<li id="last" title="中文版"><a href=javascript:lang_change("cn");>中文版</a></li>
+					</ul>
+				</nav>
+				<small>Copyright &copy; <script>document.write((new Date()).getFullYear());</script> getchee. All rights reserved.</small>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+		</script>
+		</footer>
+	</body>
+</html>

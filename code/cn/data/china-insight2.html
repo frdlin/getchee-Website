@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=gb2312>
+		<title>getchee - 50 多个城市的标准化数据集，有助于您的销售、营销和扩张规划</title>
+		<meta name="description" content="寻找目标客户、优先考虑地域以及对市场数据的存储性能比较。">
+		<meta name="keywords" content="中国, GIS 工具与解决方案, 销售营销和扩张计划, 市场数据, 布局规划, 零售品牌, POS, 人口统计, 兴趣点, 热图, 目标消费者, 竞争对手, 销售区域规划">
+		<link rel="stylesheet" href="../css/n-public.css" />
+		<link rel="stylesheet" href="../css/n-header.css" />
+		<link rel="stylesheet" href="../css/n-footer.css" />
+		<link rel="stylesheet" href="../css/n-form.css" />
+		<link rel="stylesheet" href="../css/n-prettyPhoto.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="../../js/jquery-1.6.1.min.js" ></script>
+		<script src="../../js/global-scripts.js" ></script>
+		<script src="../../js/jquery.dropdown.js" ></script>
+		<script src="../../js/custom-form-elements.js" ></script>
+		<script src="../../js/jquery.prettyPhoto.js" ></script>
+		<script src="../../js/jquery.placeholder.js" ></script>
+		<script src="../../js/jquery.anchor.js" ></script>
+		<script src="../../js/float.js" ></script>
+		<script src="../../js/jquery.validationEngine-zh_CN.js" ></script>
+		<script src="../../js/jquery.validationEngine.js" ></script>
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#configure-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+				jQuery("#contact-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+			});
+		</script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--script>
+		$(document).ready(function(){
+			$("#configure_next_03").click(function(){
+				setTimeout(function(){
+					$("#configure_form_03").hide();
+					$("#configure_form_04").show();
+				}, 1000);
+				setTimeout(function(){
+					$("html").css({"overflow":"auto"}, 100);
+					$("#configure_form_01").show();
+					$("#configure_form_02,#configure_form_03").hide();
+					$('#select2 option:selected').remove().appendTo('#select1');
+					$(".configure_bg").hide();
+					$("#configure-form")[0].reset();
+				}, 12000);
+			});
+		});
+		</script-->
+		<script>
+		$(document).ready(function(){
+			$("#contact-form").get(0).reset();
+			$("#contact-form")[0].reset();
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#configure01_01,#configure02_01,#configure03_01,#configure01_02,#configure02_02,#configure03_02").click(function(){
+				$("html").css({"overflow":"hidden"}, 100);
+				$("#abgne_float_ad").hide();
+				$(".configure_bg").fadeIn(100);
+			});
+			
+			$(".configure_close,#configure_cancel_01,#configure_cancel_02,#configure_cancel_03").click(function(){
+				location.reload();
+			});
+			
+			$("#configure_next_01").click(function(){
+				$("#configure_form_01").hide();
+				$("#configure_form_02").show();
+			});
+			
+			$("#configure_back_02").click(function(){
+				$("#configure_form_02").hide();
+				$("#configure_form_01").show();
+			});
+			
+			$("#configure_next_02").click(function(){
+				$("#configure_form_02").hide();
+				$("#configure_form_03").show();
+			});
+			
+			$("#configure_back_03").click(function(){
+				$("#configure_form_03").hide();
+				$("#configure_form_02").show();
+			});
+		});
+		</script>
+		<!--script>
+		$(document).ready(function(){
+			$("#btnSignUp").click(function(){
+				setTimeout(function(){
+					$("#curious").hide();
+					$("#thank").fadeIn(1500);
+					$('#contact-form').find(':input').each(function(){
+						var type = this.type, tag = this.tagName.toLowerCase();
+						if (type == 'text' || type == 'password' || tag == 'textarea')
+							this.value = '';
+						<!--else if (type == 'checkbox' || type == 'radio')-->
+						<!--this.checked = false;-->
+						<!--else if (tag == 'select')-->
+						<!--this.selectedIndex = -1;
+					})
+				}, 6000);
+				setTimeout(function(){
+					$("#thank").hide();
+					$("#curious").fadeIn(1500);
+					$("#btnSignUp").attr("disabled", false);
+				}, 12000);
+			});
+		});
+		</script-->
+		<script>
+		$(function() {  
+		  $(".low input[type='button']").click(function(){  
+			var arr = $(this).attr("name").split("2");  
+			var from = arr[0];  
+			var to = arr[1];  
+			$("#" + from + " option:selected").each(function(){  
+			  $("#" + to).append($(this).clone());  
+			  $(this).remove();  
+			});  
+		  });  
+		})
+		</script>
+		<script>
+		$(document).ready(function() {
+			$form = $('#configure-form'); // cache
+			$form.find('#configure_next_01').prop('disabled', true); // disable submit btn
+			$form.find('.rq').change(function() { // monitor all inputs for changes
+				var disable = false;
+				$form.find('.rq').each(function(i,el) { // test all inputs for values
+					if ($.trim(el.value) === "") {
+						disable = true; // disable submit if any of them are still blank
+					}
+				});
+				$form.find('#configure_next_01').prop('disabled',disable);
+			});
+		});
+		</script>
+		<script>
+		$().ready(function () {
+			$("input[name^='left2right']").click(function () {
+				var id = $(this).attr('id').split('_');
+				if (id[1] == 'all') {
+					$('#select1 option').remove().appendTo('#select2');
+				} else {
+					$('#select1 option:selected').remove().appendTo('#select2');
+				}
+				var selected_cities = $('#select2 option').map(function () { return $(this).val(); }).get().join(' & ');
+				$("#selected_cities").attr('value', selected_cities);
+				return false;
+			});
+			$("input[name^='right2left']").click(function () {
+				var id = $(this).attr('id').split('_');
+				if (id[1] == 'all') {
+					$('#select2 option').remove().appendTo('#select1');
+				} else {
+					$('#select2 option:selected').remove().appendTo('#select1');
+				}
+				var selected_cities = $('#select2 option').map(function () { return $(this).val(); }).get().join(' & ');
+				$("#selected_cities").attr('value', selected_cities);
+				return false;
+			});
+		});  
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+	<div id="preloaded_images">
+		<img src="../images/thank-bullet-large.png" width="1" height="1" alt="Preload Image" />
+	</div>
+	<div id="big">
+		<div id="abgne_float_ad" >
+			<a href="#footer_nav_area" class="anchorLink"><img src="../images/curious.png" width="120" height="69" alt="Link to contact form" style="height:69; width:120; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/curious.png', sizingMethod='scale');"></a>
+		</div>
+	</div>
+		<form action="../../s2form/process.php" method="post" accept-charset="gb2312" id="configure-form" name="configure-form" onSubmit="return checkFields()">
+			<div class="configure_bg">
+				<div class="configure_close"></div>
+				<div class="configure_main">
+					<div id="configure_form_01">
+						<div class="configure_title">给我们讲点儿关于你的事情</div>
+						<div class="configure_steps">步骤三之一</div>
+						<div class="configure_subtitle">个人资料</div>
+						<div class="form_block">
+							<input name="first_name" class="validate[required] left rq" type="text" placeholder="名字 (必填)">
+							<input name="last_name" class="validate[required] right rq" type="text" placeholder="姓氏 (必填)">
+							<input name="email" class="validate[required,custom[email]] left rq" type="text" placeholder="邮件地址 (必填)">
+							<input name="phone" class="right" type="text" placeholder="电话">
+							<!-- Begin Catpcha -->
+							<div id="qna">
+							<label for="captcha" id="captcha_question"></label>
+							<input type="text" name="" value="" id="captcha">
+							<p id="captcha_error">Captcha test failed. Please try again.</p>
+							<script src="../../s2form/captcha.js" ></script>
+							</div>
+							<!-- End Captcha -->
+						</div>
+						<div class="clear"></div>
+						<div class="form_block">
+							<div class="grey_line"></div>
+						</div>
+						<div class="configure_subtitle">公司信息</div>
+						<div class="form_block">
+							<input name="company_name" class="validate[required] left rq" type="text" placeholder="公司名称 (必填)">
+							<div class="styled_select">
+								<select name="industry">
+									<option value="">行业</option>
+									<option value="Automotive">汽车业</option>
+									<option value="Banking">银行业</option>
+									<option value="FMCG">快速流通业</option>
+									<option value="Retail (Apparel)">零售业（服装）</option>
+									<option value="Retail (CVS)">零售业 (CVS)</option>
+									<option value="Retail (CDR)">零售业 (CDR)</option>
+									<option value="Retail (Supermarket)">零售业 (超市)</option>
+									<option value="Retail (Hypermarket)">零售业 (量贩店)</option>
+									<option value="Retail Food (QSR)">食品零售业 (QSR)</option>
+									<option value="Other">其它</option>
+								</select>
+							</div>
+							<input name="job_title" class="left" type="text" placeholder="职称">
+							<input name="company_website" class="right" type="text" placeholder="公司网站">
+						</div>
+						<div class="form_block_right">
+							<input type="reset" class="button grey2" value="取消" id="configure_cancel_01"/>
+							<input type="button" class="button green" value="下页" id="configure_next_01"/>
+						</div>
+					</div>
+					<div id="configure_form_02">
+						<div class="configure_title">告诉我们您对哪些城市感兴趣</div>
+						<div class="configure_steps">步骤三之二</div>
+						<div class="form_block">
+							<div class="configure_half">
+								<div class="configure_subtitle">新增城市</div>
+								<select name="cities_list" id="select1" size="8" multiple="multiple" class="configure_half_form">
+									
+									<option value="Beijing, Beijing Shi">北京市</option>
+									<option value="Tianjin, Tianjin Shi">天津市</option>
+									<option value="Baoding, Hebei Sheng">河北省保定市</option>
+									<option value="Shijiazhuang, Hebei Sheng">河北省石家庄市</option>
+									<option value="Tangshan, Hebei Sheng">河北省唐山市 </option>
+									<option value="Taiyuan, Shanxi Sheng">山西省太原市</option>
+									<option value="Dalian, Liaoning Sheng">辽宁省大连市</option>
+									<option value="Shenyang, Liaoning Sheng">辽宁省沈阳市</option>
+									<option value="Changchun, Jilin Sheng">吉林省长春市</option>
+									<option value="Jilin, Jilin Sheng">吉林省吉林市</option>
+									<option value="Shanghai, Shanghai Shi">上海市</option>
+									<option value="Changzhou, Jiangsu Sheng">江苏省常州市</option>
+									<option value="Huai'An, Jiangsu Sheng">江苏省淮安市</option>
+									<option value="Nanjing, Jiangsu Sheng">江苏省南京市</option>
+									<option value="Nantong, Jiangsu Sheng">江苏省南通市</option>
+									<option value="Suzhou, Jiangsu Sheng">江苏省苏州市</option>
+									<option value="Taizhou, Jiangsu Sheng">江苏省泰州市</option>
+									<option value="Wuxi, Jiangsu Sheng">江苏省无锡市</option>
+									<option value="Xuzhou, Jiangsu Sheng">江苏省徐州市</option>
+									<option value="Yancheng, Jiangsu Sheng">江苏省盐城市</option>
+									<option value="Yangzhou, Jiangsu Sheng">江苏省扬州市</option>
+									<option value="Zhenjiang, Jiangsu Sheng">江苏省镇江市</option>
+									<option value="Hangzhou, Zhejiang Sheng">浙江省杭州市</option>
+									<option value="Jiaxing, Zhejiang Sheng">浙江省嘉兴市</option>
+									<option value="Jinhua, Zhejiang Sheng">浙江省金华市</option>
+									<option value="Ningbo, Zhejiang Sheng">浙江省宁波市</option>
+									<option value="Shaoxing, Zhejiang Sheng">浙江省绍兴市</option>
+									<option value="Taizhou, Zhejiang Sheng">浙江省台州市</option>
+									<option value="Wenzhou, Zhejiang Sheng">浙江省温州市</option>
+									<option value="Hefei, Anhui Sheng">安徽省合肥市</option>
+									<option value="Fuzhou, Fujian Sheng">福建省福州市</option>
+									<option value="Putian, Fujian Sheng">福建省莆田市</option>
+									<option value="Quanzhou, Fujian Sheng">福建省泉州市</option>
+									<option value="Xiamen, Fujian Sheng">福建省厦门市</option>
+									<option value="Nanchang, Jiangxi Sheng">江西省南昌市</option>
+									<option value="Jinan, Shandong Sheng">山东省济南市</option>
+									<option value="Jining, Shandong Sheng">山东省济宁市</option>
+									<option value="Linyi, Shandong Sheng">山东省临沂市</option>
+									<option value="Qingdao, Shandong Sheng">山东省青岛市</option>
+									<option value="Tai'An, Shandong Sheng">山东省泰安市</option>
+									<option value="Weifang, Shandong Sheng">山东省潍坊市</option>
+									<option value="Yantai, Shandong Sheng">山东省烟台市</option>
+									<option value="Zibo, Shandong Sheng">山东省淄博市</option>
+									<option value="Luoyang, Henan Sheng">河南省洛阳市</option>
+									<option value="Nanyang, Henan Sheng">河南省南阳市</option>
+									<option value="Xinxiang, Henan Sheng">河南省新乡市</option>
+									<option value="Zhengzhou, Henan Sheng">河南省郑州市</option>
+									<option value="Harbin, Heilongjiang Sheng">黑龙江省哈尔滨市</option>
+									<option value="Jingzhou, Hubei Sheng">湖北省荆州市</option>
+									<option value="Wuhan, Hubei Sheng">湖北省武汉市</option>
+									<option value="Changsha, Hunan Sheng">湖南省长沙市</option>
+									<option value="Dongguan, Guangdong Sheng">广东省东莞市</option>
+									<option value="Foshan, Guangdong Sheng">广东省佛山市</option>
+									<option value="Guangzhou, Guangdong Sheng">广东省广州市</option>
+									<option value="Huizhou, Guangdong Sheng">广东省惠州市</option>
+									<option value="Jiangmen, Guangdong Sheng">广东省江门市</option>
+									<option value="Maoming, Guangdong Sheng">广东省茂名市</option>
+									<option value="Shantou, Guangdong Sheng">广东省汕头市 </option>
+									<option value="Shenzhen, Guangdong Sheng">广东省深圳市</option>
+									<option value="Zhanjiang, Guangdong Sheng">广东省湛江市</option>
+									<option value="Zhongshan, Guangdong Sheng">广东省中山市 </option>
+									<option value="Zhuhai, Guangdong Sheng">广东省珠海市 </option>
+									<option value="Nanning, Guangxi Zhuangzu Zizhiqu">广西壮族自治区南宁市</option>
+									<option value="Haikou, Hainan Sheng">海南省海口市</option>
+									<option value="Chengdu, Sichuan Sheng">四川省成都市</option>
+									<option value="Chongqing, Chongqing Shi">重庆市</option>
+									<option value="Guiyang, Guizhou Sheng">贵州省贵阳市</option>
+									<option value="Kunming, Yunnan Sheng">云南省昆明市</option>
+									<option value="Lanzhou, Gansu Sheng">甘肃省兰州市</option>
+									<option value="Xi'An, Shanxi Sheng">陕西省西安市</option>
+									<option value="Urumqi City, Xinjiang Uygur Zizhiqu">新疆维吾尔自治区乌鲁木齐市</option>
+								</select>
+							</div>
+							<div class="low configure_switch">
+								<input name="left2right" type="button" class="icon_add" value="Add" id="add">
+								<input name="right2left" type="button" class="icon_remove" value="Remove" id="remove">
+							</div>
+							<div class="configure_half">
+								<div class="configure_subtitle">移除城市</div>
+								<select id="select2" size="8" multiple="multiple" class="configure_half_form"></select>
+								<input type="hidden" value="" id="selected_cities" name="cities">
+							</div>
+						</div>
+						<div class="form_block_right">
+							<input type="reset" class="button grey2" value="取消" id="configure_cancel_02"/>
+							<input type="button" class="button grey2" value="上页" id="configure_back_02"/>
+							<input type="button" class="button green" value="下页" id="configure_next_02"/>
+						</div>
+					</div>
+					<div id="configure_form_03">
+						<div class="configure_title">有任何问题需要我们为您服务?</div>
+						<div class="configure_steps">步骤三之三</div>
+						<div class="form_block">
+							<textarea name="message" class="configure_textarea" type="text" placeholder="问题/意见..."></textarea>
+						</div>
+						<div class="form_block_right">
+							<input type="reset" class="button grey2" name="subbut" value="取消" id="configure_cancel_03"/>
+							<input type="button" class="button grey2" name="subbut" value="上页" id="configure_back_03"/>
+							<input type="submit" class="button green" name="subbut" value="发送" id="configure_next_03"/>
+						</div>
+					</div>
+					<div id="configure_form_04" class="center">
+						<div class="configure_thank_icon"></div>
+						<h1>感谢您!</h1>
+						<h4 class="light">我们将尽快与您联系</h4>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<input type="hidden" name="tags" value="Leads from Website - China Insight Inquiries. Chinese.">
+		</form>
+		<!--    HEADER    -->
+		<header id="main-head">
+			<!--    LOGO    -->
+			<div id="logo">
+				<a href="../index.html" target="_top"><img src="../images/logo.png" alt="getchee, be market intelligent"></a>
+			</div>
+			<!--    Main Navigation    -->
+			<nav id="main_nav">
+				<ul id="dropdown" class="clear">
+					<li class="dropdown_01"><a href="../about/our-company.html">关于我们</a>
+						<ul class="bg_white">
+							<li class="dropdown_01_01"><a href="../about/our-company.html">我们的公司</a></li>
+							<li class="dropdown_01_02"><a href="../about/our-clients.html">我们的客户</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_02"><a href="../industry/food-n-beverage.html">行业</a>
+						<ul class="bg_white">
+							<li class="dropdown_02_01"><a href="../industry/food-n-beverage.html">餐饮</a></li>
+							<li class="dropdown_02_02"><a href="../industry/merchandise-n-apparel.html">商品与服装</a></li>
+							<li class="dropdown_02_03"><a href="../industry/banking-n-finance.html">银行与金融</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_03_o"><a href="data-overview.html">数据</a>
+						<ul class="bg_white">
+							<li class="dropdown_03_01"><a href="data-overview.html">数据简介</a></li>
+							<li class="dropdown_03_02"><a href="china-insight.html">中国透视</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_04"><a href="../products/kiwi-overview.html">产品</a>
+						<ul class="bg_white">
+							<li class="dropdown_04_01"><a href="../products/kiwi-overview.html">Kiwi 简介</a></li>
+							<li class="dropdown_04_02"><a href="http://www.getchee.com/kiwi/kiwi-support.html" target="_blank">Kiwi 支持</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_05"><a href="../services/services-overview.html">服务</a>
+						<ul class="bg_white">
+							<li class="dropdown_05_01"><a href="../services/services-overview.html">服务简介</a></li>
+							<li class="dropdown_05_02"><a href="../services/city-ranking-study.html">城市排名研究</a></li>
+							<li class="dropdown_05_03"><a href="../services/network-optimization-study.html">网络优化研究</a></li>
+							<li class="dropdown_05_04"><a href="../services/greenfield-market-study.html">未开发地区市场研究</a></li>
+						</ul>
+					</li>
+					<li class="dropdown_06"><a href="../contact.html">联系我们</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--    BODY ARTICLE    -->
+		<div style="display:hidden;" class="gallery clearfix"></div>
+		<div class="main_wrap">
+			<div class="title_section">
+				<h1>中国透视</h1>
+				<h2>我们已经创建了 50 多个城市的标准化数据集，<br/>这将有助于您的销售、营销和扩张规划。</h2>
+			</div>
+			<section class="white_section">
+				<div class="column_half">
+					<h4 class="s">你可以用这些数据完成什么？</h4>
+					<h5>寻找目标客户、优先考虑地域以及对市场数据的存储性能比较。</h5>
+					<p>无论你是一个新的市场进入者，或有在中国现有的网络，这些数据将帮助验证您的销售、营销、扩张的决定，并更好地管理业务的风险。</p>
+					<p>用它来估计总市场潜力及净市场潜力的地区和重点商圈（从目标消费者、竞争对手、协同品牌派生出来）。通过比较市场数据，用它来更好地了解和调整您现有的店铺网络通过比较店铺的业绩和运营成本（POS 和固定/可变成本）。</p>
+				</div>
+				<div class="column_half_last">
+					<h4 class="s">你如何使用这些数据产品？</h4>
+					<h5>分析这些数据可以通过 GIS 工具，如<a href="http://www.esri.com/software/arcgis/index.html" target="_blank"> ESRI 的 ArcGIS</a>、<a href="http://mapbox.com/tilemill/" target="_blank"> MapBox 的 Tile Mill</a>、<a href="http://en.wikipedia.org/wiki/Business_intelligence_tools" target="_blank"> BI 软件</a>或 MS Excel。</h5>
+					<p>销售，市场营销或业务分析师可以插入标准化的工具，这个数据客用来支持分布规划，销售地区的开拓，和其他活动的营销活动策划。</p>
+					<p><span class="hilight">范例</span>－比方说，你是一个服装零售品牌，你想通知您的客户年终销售情况。这些数据加载到 Excel 电子表格，你可以很快发现大量目标消费者的领域。使用此信息来投资在派发宣传单张，基于位置的短信，和其他的营销活动的成本。</p>
+				</div>
+			
+		    <table id="order_table" class="gallery clearfix">
+				<tr>
+					<th class="first">
+						<dl class="product_video_container_bottom">
+							<dt><img src="../images/i-data-fast-food.png" alt="China Insight"></dt>
+							<dd></dd>
+						</dl>
+					</th>
+					<th>
+						<div class="order_table_title">基本的</div>
+						<div class="order_table_desc">全国人口和 GDRP 数据包</div>
+						<div class="order_table_16"><span class="hilight">配置和查询</span></div>
+						<div><input type="button" class="button_download grey" name="subbut" value="配置" id="configure01_01" onclick="$('#contact-form').validationEngine('hide'); return false;"/></div>
+					</th>
+					<th>
+						<div class="order_table_title">附加</div>
+						<div class="order_table_desc">高级人口统计数据热图</div>
+						<div class="order_table_16"><span class="hilight">配置和查询</span></div>
+						<div><input type="button" class="button_download grey" name="subbut" value="配置" id="configure02_01" onclick="$('#contact-form').validationEngine('hide'); return false;"/></div>
+					</th>
+					<th>
+						<div class="order_table_title">最大化</div>
+						<div class="order_table_desc">高级人口统计数据<br/>热图和 POI</div>
+						<div class="order_table_16"><span class="hilight">配置和查询</span></div>
+						<div><input type="button" class="button_download grey" name="subbut" value="配置" id="configure03_01" onclick="$('#contact-form').validationEngine('hide'); return false;"/></div>
+					</th>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">地区（中国）</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>城市中心</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>全国中心</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">人口统计学</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<p class="hilight">城市化水平</p>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>住户数目</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>工作人口</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>总人口</p>
+					</td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>GRDP</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>教育</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>收入</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<p class="hilight">网格等级（1 平方公里）</p>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>年龄/性别</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>住户数目</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>总人口</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>工作人口</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>500 平方米市中心区</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">兴趣点（POI）</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<div class="table_half">
+							<p>服饰</p>
+							<p>银行</p>
+							<p>咖啡和茶</p>
+							<p>饭店</p>
+							<p>大型超级市场</p>
+						</div>
+						<div class="table_half">
+							<p>个人护理用品</p>
+							<p>连锁快餐店</p>
+							<p>餐厅</p>
+							<p>购物中心</p>
+							<p>超级市场</p>
+						</div>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first_bottom">
+						<div class="order_table_desc s"><span class="hilight">热图</span></div>
+					</td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+					<td class="bottom"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>便捷性</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>商业</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>生活方式</p>
+					</td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<p>人口</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td><img src="../images/green_spot.png" alt="check"></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<div class="order_table_desc s"><span class="hilight">文件格式</span></div>
+					</td>
+					<td><div class="order_table_16 s">.kml / .xls / .shp</div></td>
+					<td><div class="order_table_16 s">.kml / .xls / .shp</div></td>
+					<td><div class="order_table_16 s">.kml / .xls / .shp</div></td>
+				</tr>
+				<tr>
+					<td class="first">
+						<div class="order_table_desc s"><span class="hilight">价格（美元）</span></div>
+					</td>
+					<td><div class="order_table_16 s"><span class="hilight">配置和查询</span></div></td>
+					<td><div class="order_table_16 s"><span class="hilight">配置和查询</span></div></td>
+					<td><div class="order_table_16 s"><span class="hilight">配置和查询</span></div></td>
+				</tr>
+				<tr>
+					<td class="first_bottom"></td>
+					<td class="bottom"><input type="button" class="button_download grey" name="subbut" value="配置" id="configure01_02" onclick="$('#contact-form').validationEngine('hide'); return false;"/></td>
+					<td class="bottom"><input type="button" class="button_download grey" name="subbut" value="配置" id="configure02_02" onclick="$('#contact-form').validationEngine('hide'); return false;"/></td>
+					<td class="bottom"><input type="button" class="button_download grey" name="subbut" value="配置" id="configure03_02" onclick="$('#contact-form').validationEngine('hide'); return false;"/></td>
+				</tr>
+		    </table>
+			<div class="clear"></div>
+			</section>
+        </div>
+		<!--    FOOTER    -->
+		<div class="footer_top"></div>
+		<footer id="footer">
+			<div id="content">
+			<div class="wrapper">
+				<div class="footer-left">
+					<div class="footer-left-top">
+						<h2>&#8220;<q>只要你有时间，天涯近在咫尺</q>&#8221;</h2>
+						<h2 class="gray"><i>- Steven Wright</i></h2>
+						<p>遗憾的是，在亚洲经营的品牌所有者很少有时间能从容的进行扩展；更高明的规划并运行新兴市场，现在正是时候。</p>
+					</div>
+					<div class="footer-left-middle">
+						<h2>我们的博客</h2>
+					</div>
+					<div id="footer-left-bottom-left">
+						<dl>
+							<dd>浏览<a href="http://blog.getchee.com/" target="_blank">我们的博客</a>，与亚洲新兴市场零售产业信息与趋势时刻保持同步。</dd>
+						</dl>
+					</div>
+					<div id="footer-left-bottom-right">
+						<nav>
+							<ul class="social_network">
+								<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="../images/nav-social-network-linkedin.png" class="ro" alt="LinkedIn"></a></li>
+								<li><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="../images/nav-social-network-youku.png" class="ro" alt="优酷"></a></li>
+								<li><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="../images/nav-social-network-weibo.png" class="ro" alt="新浪微博"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-right-top">
+						<h1>我们提供市场洞察力、工具和服务，帮助品牌在亚洲蓬勃发展。<a href="../about/our-company.html" title="Learn More">了解更多</a></h1>
+					</div>
+					<h2 id="curious">有疑问？请与我们联系。</h2><div id="thank" style="display:none"><span class="text_white">感谢您！</span>我们将尽快与您联系。</div>
+					<form action="../../s2form/process.php" method="post" accept-charset="utf-8" id="contact-form" name="contact-form" onSubmit="return checkFields()" autocomplete="off">
+						<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="姓名">
+						<input name="email" id="email" class="validate[required,custom[email]] youremail star" type="text" placeholder="邮件地址">
+						<textarea name="message" id="message" class="validate[required] textarea star" type="text" placeholder="问题"></textarea>
+						<!-- Begin Catpcha -->
+						<div id="qna">
+						<label for="captcha" id="captcha_question"></label>
+						<input type="text" name="" value="" id="captcha">
+						<p id="captcha_error">Captcha test failed. Please try again.</p>
+						<script src="../../s2form/captcha.js" ></script>
+						</div>
+						<!-- End Captcha -->
+						<div style="display:hidden;" class="gallery clearfix"></div>
+						<input type="hidden" name="tags" value="Leads from Website - Curious. China insight. Chinese.">
+						<div class="left_f" style="width:350px;">
+							<input type="checkbox" class="styled" name="newsletter subscription" value="Yes" checked="checked"/>
+							<span class="checkbox_label gallery clearfix">注册我们的新闻通讯。 
+							<ul class="newsletter_link">
+								<li class="preview"><a href="../images/newsletter-preview.png" rel="prettyPhoto" title="">预览</a></li>
+								<li class="archive"><a href="http://us6.campaign-archive2.com/home/?u=dee2b153b95bd76c8bbc6a009&id=9b3db0ba54" target="_blank">存档</a></li>
+							</ul>
+						</div>
+						<div class="right_f">
+							<input type="submit" class="button dark" name="subbut" value="发送" id="btnSignUp" />
+						</div>
+					</form>
+					<!--[if IE]>
+					  <script>
+					   // To test the @id toggling on password inputs in browsers that don?|t support changing an input?|s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+					   // jQuery.fn.hide = function() { return this; }
+					   // Then uncomment the last rule in the <style> element (in the <head>).
+					   $(function() {
+						// Invoke the plugin
+						$('input, textarea').placeholder();
+						// That?|s it, really.
+						// Now display a message if the browser supports placeholder natively
+						var html;
+						if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won?|t run in this case, since it?|s not needed. If you want to test the plugin, use an older browser ;)';
+						} else if ($.fn.placeholder.input) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+						}
+						if (html) {
+						 $('<p class="note">' + html + '</p>').insertAfter('form');
+						}
+					   });
+					  </script>
+					<![endif]-->
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav_area">
+			<div class="wrapper">
+				<nav>
+					<ul class="footer_nav">
+						<li><a href="../privacy-policy.html" target="_top" title="Privacy Policy">隐私条款</a></li>
+						<li><a href="../terms-of-use.html" target="_top" title="Terms of Use">使用条款</a></li>
+						<li id="last" title="English"><a href=javascript:lang_change("us");>English</a></li>
+					</ul>
+				</nav>
+				<small>&copy; <script>document.write((new Date()).getFullYear());</script> 磐讯版权所有</small>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); 
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff006ceda7e9720c677698e08dab44f47' type='text/javascript'%3E%3C/script%3E")); 
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+		</script>
+		</footer>
+	</body>
+</html>

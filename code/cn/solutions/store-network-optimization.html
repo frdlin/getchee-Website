@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>getchee – 门店网络优化解决方案</title> 
+  		<meta name="description" content="提高零售商店生产效率的同时有效降低不良资产投资的风险"> 
+  		<meta name="keywords" content="门店网络优化, 中国, 印度, 东南亚, 增进市占率, 标准和定制的市场数据, 提高店铺生产力, 地图上的可视化数据, 数据收集工具, GIS, 市场潜力分析, 零售店铺选址, 餐饮, 商品与服装, 银行与金融">
+		<link rel="stylesheet" href="../css/n-public.css" />
+		<link rel="stylesheet" href="../css/n-header.css" />
+		<link rel="stylesheet" href="../css/n-footer.css" />
+		<link rel="stylesheet" href="../css/n-form.css" />
+		<link rel="stylesheet" href="../css/n-prettyPhoto.css" />
+		<link rel="stylesheet" href="../css/new_style.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+		<script src="../../js/jquery-1.6.1.min.js" ></script>
+		<script src="../../js/global-scripts.js" ></script>
+		<script src="../../js/jquery.dropdown.js" ></script>
+		<script src="../../js/custom-form-elements.js" ></script>
+		<script src="../../js/jquery.prettyPhoto.js" ></script>
+		<script src="../../js/jquery.placeholder.js" ></script>
+		<script src="../../js/jquery.anchor.js" ></script>
+		<script src="../../js/float.js" ></script>
+		<script src="../../js/jquery.validationEngine-zh_CN.js" ></script>
+		<script src="../../js/jquery.validationEngine.js" ></script>
+		<script src="../../js/jquery.cycle.lite.min.js" ></script>
+		<script src="../../js/html5gallery.js"></script>
+		<script src="../../js/slideshow2.js"></script>
+		<script>
+			jQuery(document).ready(function(){
+				// binds form submission and fields to the validation engine
+				jQuery("#contact-form").validationEngine('attach', {promptPosition : "topLeft", autoPositionUpdate : true});
+			});
+		</script>
+
+		<script>
+			$(document).ready(function() {
+				$('.language_switch').click(function(){
+			    	$('.language').toggle('fast');
+				});
+			});
+		</script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btnSignUp").click(function(){
+				setTimeout(function(){
+					$("#curious").hide();
+					$("#thank").fadeIn(1500);
+					$('#contact-form').find(':input').each(function(){
+						var type = this.type, tag = this.tagName.toLowerCase();
+						if (type == 'text' || type == 'password' || tag == 'textarea')
+							this.value = '';
+						<!--else if (type == 'checkbox' || type == 'radio')-->
+						<!--this.checked = false;-->
+						<!--else if (tag == 'select')-->
+						<!--this.selectedIndex = -1;
+					})
+				}, 6000);
+				setTimeout(function(){
+					$("#thank").hide();
+					$("#curious").fadeIn(1500);
+					$("#btnSignUp").attr("disabled", false);
+				}, 12000);
+			});
+		});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$("#contact-form").get(0).reset();
+			$("#contact-form")[0].reset();
+		});
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-4949329-1']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+	<div id="big">
+		<div id="abgne_float_ad" >
+			<a href="#footer_nav_area" class="anchorLink"><img src="../images/curious.png" width="120" height="69" alt="Link to contact form" style="height:69; width:120; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/curious.png', sizingMethod='scale');"></a>
+		</div>
+	</div>
+		<!--    HEADER    -->
+		<header id="main-head-new">
+			<!--    LOGO    -->
+			<div class="header_nav">
+				<div class="main_wrap">
+					<div class="header-left">
+						<ul>
+							<li class="border"><a href="http://blog.getchee.com/" target="_blank" title="Our Blog">我们的博客</a></li>
+							<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="../images/header-social-linkedin.png" class="ro" alt="LinkedIn"/></a></li>
+							<li class="narrow"><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="../images/header-social-youku.png" class="ro" alt="优酷"/></a></li>
+							<li class="narrow border"><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="../images/header-social-sinaweibo.png" class="ro" alt="新浪微博"/></a></li>
+							<li class="border"><a href="mailto:marketing@getchee.com" target="_blank" title="marketing@getchee.com"><img src="../images/header-mail.png" alt="Email"/></a></li>
+							<li><img src="../images/header-phone.png" alt="Phone"/></li>
+							<li class="narrow">+886 2 7722 3600</li>
+						</ul>
+					</div>
+					<div class="header-right">
+						<ul>
+							<li>电子报订阅</li>
+							<li class="narrow2">
+								<form action="http://getchee.us6.list-manage1.com/subscribe/post" method="POST">
+									<input type="hidden" name="u" value="dee2b153b95bd76c8bbc6a009">
+									<input type="hidden" name="id" value="811abd86dd">
+
+									<div id="mergeTable" class="mergeTable" style="float:left;">
+										<div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+											<div class="field-group">
+												<input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" class="header_email" value="" placeholder="邮件地址">
+											</div>
+										</div>
+									</div>
+
+									<div id="interestTable">
+										<div id="mergeRow-100-9529" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Product interest shown</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_1"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_1" name="group[9529][1]" value="1" class="av-checkbox">Data interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_2"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_2" name="group[9529][2]" value="1" class="av-checkbox">Market Entry Interest</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_4"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_4" name="group[9529][4]" value="1" class="av-checkbox">Network Optimization Interest</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9537" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>No Product interest</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_8"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_8" name="group[9537][8]" value="1" class="av-checkbox">No Product Interest shown</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+
+										<div id="mergeRow-100-9649" class="mergeRow dojoDndItem mergeRowHidden mergeRow-interests-hidden" style="display:none;">
+											<label>Qualified leads</label>
+												<div class="field-group groups">
+													<ul class="interestgroup_field checkbox-group" id="interestgroup_field_121949">
+														<li class="below12">
+															<label class="checkbox" for="group_16"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_16" name="group[9649][16]" value="1" class="av-checkbox">Qualified lead</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_32"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_32" name="group[9649][32]" value="1" class="av-checkbox">Pending deal</label>
+														</li>
+														<li class="below12">
+															<label class="checkbox" for="group_64"><input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="group_64" name="group[9649][64]" value="1" class="av-checkbox">Purchased services</label>
+														</li>
+													</ul>
+												</div>
+										</div>
+									</div>
+
+								<!-- real people should not fill this in and expect good things -->
+									<div style="position: absolute; left: -5000px;">
+										<input type="text" name="b_dee2b153b95bd76c8bbc6a009_811abd86dd" value="">
+									</div>
+									<input type="submit" value="Send" class="header_submit" alt="Subscribe Button"/>
+								</form>
+							</li>
+							<li class="narrow3">
+								<ul class="language_switch">
+									<li><a href="#">中文</a>
+										<ul>
+											<li class="language"><a href=javascript:lang_change("us");>English</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="main_nav">
+				<nav class="main_wrap">
+					<div class="logo_new"><a href="index.html" target="_top"><img src="../images/logo.png" alt="getchee"/></a></div>
+					<ul class="main_menu">
+						<li><a href="../about/our-company.html">关于我们</a>
+							<ul>
+								<li><a href="../about/our-company.html">我们的公司</a></li>
+								<li><a href="../about/our-clients.html">我们的客户</a></li>
+							</ul>
+						</li>
+						<li><a href="../industry/food-n-beverage.html">行业</a>
+							<ul>
+								<li><a href="../industry/food-n-beverage.html">餐饮</a></li>
+								<li><a href="../industry/merchandise-n-apparel.html">商品与服装</a></li>
+								<li><a href="../industry/banking-n-finance.html">银行与金融</a></li>
+							</ul>
+						</li>
+						<li><a href="../data/data-overview.html">数据</a>
+							<ul>
+								<li><a href="../data/data-overview.html">数据简介</a></li>
+								<li><a href="../data/china-insight.html">中国透视</a></li>
+							</ul>
+						</li>
+						<li><a href="../products/kiwi-overview.html">平台</a>
+							<ul>
+								<li><a href="../products/kiwi-overview.html">Kiwi 简介</a></li>
+								<li><a href="http://www.getchee.com/kiwi/kiwi-support.html">Kiwi 支持</a></li>
+							</ul>
+						</li>
+						<li><a href="../services/services-overview.html">服务</a>
+							<ul>
+								<li><a href="../services/services-overview.html">服务简介</a></li>
+								<li><a href="../services/city-ranking-study.html">城市排名研究</a></li>
+								<li><a href="../services/network-optimization-study.html">网络优化研究</a></li>
+								<li><a href="../services/greenfield-market-study.html">未开发地区市场研究</a></li>
+							</ul>
+						</li>
+						<li><a href="../contact.html">联系我们</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="clear"></div>
+		<!--    BODY ARTICLE    -->
+		<div class="title_section" style="background-image: url(../images/background/webBack1.png);">
+			<div class="title_wrap_two">
+				<h1>门店网络优化</h1>
+				<h2>提高零售商店生产效率的同时有效降低不良资产投资的风险</h2>
+			</div>
+		</div>
+		<div class="main_wrap">
+			<section class="white_section">
+				<div class="column_half">
+				  <h4 class="s">谁是最适合您的伙伴?</h4>
+					<h5>我们的解决方案是在中国、印度、东南亚地区拥有广泛店铺网络零售品牌的最佳选择。</h5>
+					<p class="bottom">我们拥有与中国、印度、东南亚地区众多的零售商巨头的合作经历。我们了解您的目标和面临的挑战。这一套解决方案致力于帮助在亚洲地区已经拥有了一定市场份额的您，进一步进行市场渗透，增加市场份额并优化门店网络以提高门店产出。</p>
+				</div>
+				<div class="column_half_last">
+					<h4 class="s">我们能做什么？</h4>
+					<h5>此方案可以有效提高门店生产力，并帮助您简化规划流程。</h5>
+					<p class="bottom">这个解决方案涵盖了整个市场规划过程，从前期数据调研到撰写报告再到精简的店铺选址审批流程。它可以帮助您的发展运营团队快速评估新地点，发掘商店绩效差异背后的原因，并通过客观数据提供最地道的本地咨询。</p>
+				</div>
+			<div class="clear"></div>
+			</section>
+		</div>
+		<div class="grey_line"></div>
+			<section class="grey_section">
+				<div class="main_wrap">
+					<div class="column_two_third gallery clearfix">
+						<img src="../images/store-network-optimization.png" class="alone30" alt="Store Network Optimization" />
+						<div class="column_one_third">
+							<p class="bottom">这一解决方案支持多层次的商业计划，从城市到商圈，再细化到购物商场和微观环境。</p>
+						</div>
+						<div class="column_one_third_last">
+							<p class="bottom">加权计分卡与交通流分析技术支持独立门店的开张、关闭、保留与搬迁决策。</p>
+						</div>
+					</div>
+					<div class="column_one_third_last">
+						<div id="aside_box_white">
+							<h5 class="hilight">核心价值</h5>
+							<ul class="round">
+								<li><span class="hilight">提高市场份额</span><br />
+							    研究结论为您提供最大覆盖率的门店网络方案。</li>
+								<li><span class="hilight">获得客观观点</span><br />市场数据允许您验证您的现有知识和直觉。</li>
+								<li><span class="hilight">增强业务流程</span><br /> 
+								  有效率地定位区域进行店铺选址、排名及验证。</li>
+								<li><span class="hilight">提升店铺效率</span><br /> 
+								  选择市场潜力大的门店，增加其成功的可能性。</li>
+							</ul>
+						</div>
+						<div id="aside_box_white_bottom">
+							<h5 class="hilight">组件</h5>
+							<ul class="round">
+								<li><span class="hilight"><a href="../data/data-overview.html">数据</a></span><br />
+								  标准和客制化的市场数据，包括人口划分，POI 强度和经济发展趋势。</li>
+							  <li><span class="hilight"><a href="../services/services-overview.html">服务</a></span></span><br />
+							    数据建模、市场分析、报告和工具与业务流程整合。</li>
+								<li><span class="hilight"><a href="../products/kiwi-overview.html">工具</a></span><br />
+							    数据收集工具和基于网络的数据可视化软件来提高市场规划效率。</li>
+							</ul>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</section>
+			
+			<div class="grey_line"></div>
+			<section class="white_section">
+				<div class="main_wrap">
+			
+					<div class="column_one_third">
+						<h4 class="s">评估您的门店网络</h4>
+						<h5>评估您当前的门店网络是否有效覆盖高潜力地区</h5>
+						<p>标出您现有门店网路中有悖于市场潜力的地方（数据分析基于目标客户，竞争者及合作伙伴），显示您店铺覆盖效用的信息。</p>
+                        <p>店铺绩效数据 (POS data) 分析可以帮助我们更好地理解影响店铺绩效的市场因素。</p>
+                        <p class="bottom"><span class="hilight">发掘额外的洞察力</span>－通过对您的店铺网络的测评，您不仅可以明白为什么有些本来有潜力的商铺表现不佳，与此同时，您对于影响店铺绩效的空间因素也会有更加清晰的认识。</p>
+					</div>
+					<div class="column_one_third">
+						<h4 class="s">找出差距与重叠</h4>
+						<h5>为新店铺的扩张寻找高潜力区域</h5>
+						<p>一旦在市场中找到差距，您的市场开发团队会获得需要的洞察力去优化您的网络以便最优化地覆盖市场需求，运行一个最优的店铺网络。</p>
+						<p><span class="hilight">扩张与优化计划</span>－店面扩张计划应在优先考虑市场覆盖的同时降低品牌冲突的风险。getchee 为品牌拥有者打造一个合适的店面推广计划，识别和优化扩张领域。</p>
+                        <p class="bottom">我们提供一个基于云计算的解决方案 <a href="../products/kiwi-overview.html">Kiwi™</a>，帮助您进行店铺选址决策与市场潜力分析。<a href="../products/kiwi-overview.html">Kiwi™</a> 可以配合您的业务流程以减少时间，降低成本并通过验证新店铺开张与潜力进行管理风险。</p>
+					</div>
+					<div class="column_one_third_last">
+						<div id="aside_box_grey_bottom">
+							<h5>这套解决方案适合什么样的产业？</h5>
+							<ul class="square">
+								<li><a href="../industry/food-n-beverage.html">食品与饮料</a></li>
+                                <li><a href="../industry/merchandise-n-apparel.html">服装、鞋类及配件</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</section>
+		<!--    FOOTER    -->
+		<div class="footer_top"></div>
+		<footer id="footer">
+			<div id="content">
+			<div class="wrapper">
+				<div class="footer-left">
+					<div class="footer-left-top">
+						<h2>&#8220;<q>只要你有时间，天涯近在咫尺</q>&#8221;</h2>
+						<h2 class="gray"><i>- Steven Wright</i></h2>
+						<p>遗憾的是，在亚洲经营的品牌所有者很少有时间能从容的进行扩展；更高明的规划并运行新兴市场，现在正是时候。</p>
+					</div>
+					<div class="footer-left-middle">
+						<h2>我们的博客</h2>
+					</div>
+					<div id="footer-left-bottom-left">
+						<dl>
+							<dd>浏览<a href="http://blog.getchee.com/" target="_blank">我们的博客</a>，与亚洲新兴市场零售产业信息与趋势时刻保持同步。</dd>
+						</dl>
+					</div>
+					<div id="footer-left-bottom-right">
+						<nav>
+							<ul class="social_network">
+								<li><a href="http://www.linkedin.com/company/getchee" target="_blank" title="LinkedIn"><img src="../images/nav-social-network-linkedin.png" class="ro" alt="LinkedIn"></a></li>
+								<li><a href="http://u.youku.com/user_show/uid_getchee" target="_blank" title="优酷"><img src="../images/nav-social-network-youku.png" class="ro" alt="优酷"></a></li>
+								<li><a href="http://weibo.com/getchee/profile?leftnav=1&wvr=3.6&mod=personinfo" target="_blank" title="新浪微博"><img src="../images/nav-social-network-weibo.png" class="ro" alt="新浪微博"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-right-top">
+						<h1>我们提供市场洞察力、工具和服务，帮助品牌在亚洲蓬勃发展。<a href="../about/our-company.html" title="Learn More">了解更多</a></h1>
+					</div>
+					<h2 id="curious">有疑问？请与我们联系。</h2><div id="thank" style="display:none"><span class="text_white">感谢您！</span>我们将尽快与您联系。</div>
+					<form action="../../s2form/process.php" method="post" accept-charset="utf-8" id="contact-form" name="form" onSubmit="return checkFields()" autocomplete="off">
+						<input name="name" id="name" class="validate[required] yourname star" type="text" placeholder="姓名">
+						<input name="email" id="email" class="validate[required,custom[email]] youremail star" type="text" placeholder="邮件地址">
+						<textarea name="message" id="message" class="validate[required] textarea star" type="text" placeholder="问题"></textarea>
+						<!-- Begin Catpcha -->
+						<div id="qna">
+						<label for="captcha" id="captcha_question"></label>
+						<input type="text" name="" value="" id="captcha">
+						<p id="captcha_error">Captcha test failed. Please try again.</p>
+						<script src="../../s2form/captcha.js" ></script>
+						</div>
+						<!-- End Captcha -->
+						<div style="display:hidden;" class="gallery clearfix"></div>
+						<input type="hidden" name="tags" value="Leads from Website - Curious. Store Network Optimization Solution. Chinese.">
+						<div class="left_f" style="width:350px;">
+							<input type="checkbox" class="styled" name="newsletter subscription" value="Yes" checked="checked"/>
+							<span class="checkbox_label gallery clearfix">注册我们的新闻通讯。
+							<ul class="newsletter_link">
+								<li class="preview"><a href="../images/newsletter-preview.png" rel="prettyPhoto" title="">预览</a></li>
+								<li class="archive"><a href="http://us6.campaign-archive2.com/home/?u=dee2b153b95bd76c8bbc6a009&id=9b3db0ba54" target="_blank">存档</a></li>
+							</ul>
+						</div>
+						<div class="right_f">
+							<input type="submit" class="button dark" name="subbut" value="发送" id="btnSignUp" />
+						</div>
+					</form>
+					<!--[if IE]>
+					<script>
+						$('#middle-name').keyup(function() {
+							var empty = true;
+							$('#middle-name').ready(function() {
+								if ($(this).val() == '') {
+									empty = true;
+								}
+							});
+							if (empty) {
+								$('#btnSignUp').attr('disabled', 'none');
+							} else {
+								$('#btnSignUp').attr('disabled', 'disabled');
+							}
+						});
+					</script>
+					  <script>
+					   // To test the @id toggling on password inputs in browsers that don¡¦t support changing an input¡¦s @type dynamically (e.g. Firefox 3.6 or IE), uncomment this:
+					   // jQuery.fn.hide = function() { return this; }
+					   // Then uncomment the last rule in the <style> element (in the <head>).
+					   $(function() {
+						// Invoke the plugin
+						$('input, textarea').placeholder();
+						// That¡¦s it, really.
+						// Now display a message if the browser supports placeholder natively
+						var html;
+						if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> and <code>textarea</code> elements.</strong> The plugin won¡¦t run in this case, since it¡¦s not needed. If you want to test the plugin, use an older browser ;)';
+						} else if ($.fn.placeholder.input) {
+						 html = '<strong>Your current browser natively supports <code>placeholder</code> for <code>input</code> elements, but not for <code>textarea</code> elements.</strong> The plugin will only do its thang on the <code>textarea</code>s.';
+						}
+						if (html) {
+						 $('<p class="note">' + html + '</p>').insertAfter('form');
+						}
+					   });
+					  </script>
+					<![endif]-->
+				</div>
+			</div>
+		</div>
+		<div id="footer_nav_area">
+			<div class="wrapper">
+				<nav>
+					<ul class="footer_nav">
+						<li><a href="../privacy-policy.html" target="_top" title="Privacy Policy">隐私条款</a></li>
+						<li><a href="../terms-of-use.html" target="_top" title="Terms of Use">使用条款</a></li>
+						<li id="last" title="English"><a href=javascript:lang_change("us");>English</a></li>
+					</ul>
+				</nav>
+				<small>&copy; <script>document.write((new Date()).getFullYear());</script> 磐讯版权所有</small>
+			</div>
+		</div>
+		<script type="text/javascript"> 
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); 
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff006ceda7e9720c677698e08dab44f47' type='text/javascript'%3E%3C/script%3E")); 
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+					custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+					changepicturecallback: function(){ initialize(); }
+				});
+
+				$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+					custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+					changepicturecallback: function(){ _bsap.exec(); }
+				});
+			});
+		</script>
+		</footer>
+	</body>
+</html>

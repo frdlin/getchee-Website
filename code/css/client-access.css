@@ -1,0 +1,44 @@
+table, td, th{
+	margin-left: 10px;
+	border: 1px solid #999999;
+}
+
+th{
+	color: #666666;
+}
+
+td, th{
+	padding: 5px;
+}
+
+.client-center-title{
+	 color: #333333;
+    font-size: 21px;
+    padding-bottom: 15px;
+}
+
+.dash ul{
+	margin-left: 25px;
+}
+
+.dash li{
+	margin-left: 25px;
+}
+
+#h2-container{
+	display: inline;
+	width: auto;
+}
+
+#h2-container h2{
+	float: left;
+}
+
+.link-clear{
+	clear: both;
+}
+
+#zoom table, td, th{
+	margin-left: 10px;
+	border: 0px solid #999999;
+}
